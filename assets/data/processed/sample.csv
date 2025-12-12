@@ -1,0 +1,11 @@
+,age,isMale,cp,restSBP,chol,fastingBGLHigh,restECG,exerciseMaxHR,exerciseAngina,stDepressionExercise,stSlope,caFluor,thal,stage
+199cl,59,1,typical anginal,160,273,0,LVH,125,0,0.0,upsloping,0,fixed,1
+48cl,65,0,nonanginal,140,417,1,LVH,157,0,0.8,upsloping,1,fixed,0
+74hu,45,1,atypical anginal,140,224,1,normal,122,0,0.0,,,,0
+95va,63,1,asymptomatic,160,267,1,ST-T abnormality,88,1,2.0,,,,3
+280cl,57,1,asymptomatic,110,335,0,normal,143,1,3.0,flat,1,none,2
+200hu,43,1,asymptomatic,150,247,0,normal,130,1,2.0,flat,,,1
+196hu,38,1,asymptomatic,92,117,0,normal,134,1,2.5,flat,,,1
+76va,49,1,typical anginal,130,0,0,ST-T abnormality,145,0,3.0,flat,,,2
+21sw,47,1,nonanginal,155,0,0,normal,118,1,1.0,flat,,fixed,3
+51sw,55,1,atypical anginal,140,0,,ST-T abnormality,150,0,0.2,upsloping,,,0

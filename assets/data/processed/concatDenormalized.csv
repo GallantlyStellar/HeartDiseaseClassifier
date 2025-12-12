@@ -1,0 +1,919 @@
+,age,isMale,cp,restSBP,chol,fastingBGLHigh,restECG,exerciseMaxHR,exerciseAngina,stDepressionExercise,stSlope,caFluor,thal,stage
+0va,63,1,asymptomatic,140,260,0,ST-T abnormality,112,1,3.0,flat,,,2
+1va,44,1,asymptomatic,130,209,0,ST-T abnormality,127,0,0.0,,,,0
+2va,60,1,asymptomatic,132,218,0,ST-T abnormality,140,1,1.5,downsloping,,,2
+3va,55,1,asymptomatic,142,228,0,ST-T abnormality,149,1,2.5,upsloping,,,1
+4va,66,1,nonanginal,110,213,1,LVH,99,1,1.3,flat,,,0
+5va,66,1,nonanginal,120,0,0,ST-T abnormality,120,0,-0.5,upsloping,,,0
+6va,65,1,asymptomatic,150,236,1,ST-T abnormality,105,1,0.0,,,,3
+7va,60,1,nonanginal,180,0,0,ST-T abnormality,140,1,1.5,flat,,,0
+8va,60,1,nonanginal,120,0,,normal,141,1,2.0,upsloping,,,3
+9va,60,1,atypical anginal,160,267,1,ST-T abnormality,157,0,0.5,flat,,,1
+10va,56,1,atypical anginal,126,166,0,ST-T abnormality,140,0,0.0,,,,0
+11va,59,1,asymptomatic,140,0,0,ST-T abnormality,117,1,1.0,flat,,,1
+12va,62,1,asymptomatic,110,0,0,normal,120,1,0.5,flat,,fixed,1
+13va,63,1,nonanginal,,0,0,LVH,,,,,,,1
+14va,57,1,asymptomatic,128,0,1,ST-T abnormality,148,1,1.0,flat,,,1
+15va,62,1,asymptomatic,120,220,0,ST-T abnormality,86,0,0.0,,,,0
+16va,63,1,asymptomatic,170,177,0,normal,84,1,2.5,downsloping,,,4
+17va,46,1,asymptomatic,110,236,0,normal,125,1,2.0,flat,,,1
+18va,63,1,asymptomatic,126,0,0,ST-T abnormality,120,0,1.5,downsloping,,,0
+19va,60,1,asymptomatic,152,0,0,ST-T abnormality,118,1,0.0,,,none,0
+20va,58,1,asymptomatic,116,0,0,normal,124,0,1.0,upsloping,,,2
+21va,64,1,asymptomatic,120,0,1,ST-T abnormality,106,0,2.0,flat,,,1
+22va,63,1,nonanginal,130,0,0,ST-T abnormality,111,1,0.0,,,,3
+23va,74,1,nonanginal,,0,0,normal,,,,,,,0
+24va,52,1,nonanginal,128,0,0,ST-T abnormality,180,0,3.0,upsloping,,,2
+25va,69,1,asymptomatic,130,0,1,ST-T abnormality,129,0,1.0,flat,,reversible,2
+26va,51,1,asymptomatic,,0,1,ST-T abnormality,,,,,,,2
+27va,60,1,asymptomatic,130,186,1,ST-T abnormality,140,1,0.5,flat,,,1
+28va,56,1,asymptomatic,120,100,0,normal,120,1,1.5,flat,0,none,1
+29va,55,1,nonanginal,,228,0,ST-T abnormality,,,,,,,3
+30va,54,1,asymptomatic,,0,0,ST-T abnormality,,,,,,,3
+31va,77,1,asymptomatic,124,171,0,ST-T abnormality,110,1,2.0,upsloping,,,3
+32va,63,1,asymptomatic,160,230,1,normal,105,1,1.0,flat,,,3
+33va,55,1,nonanginal,0,0,0,normal,155,0,1.5,flat,,,3
+34va,52,1,nonanginal,122,0,0,normal,110,1,2.0,downsloping,,,2
+35va,64,1,asymptomatic,144,0,0,ST-T abnormality,122,1,1.0,flat,,,3
+36va,60,1,asymptomatic,,281,0,ST-T abnormality,,,,,,,2
+37va,60,1,asymptomatic,120,0,0,normal,133,1,2.0,upsloping,,none,0
+38va,58,1,asymptomatic,,203,1,normal,,,,,,,1
+39va,59,1,asymptomatic,154,0,0,ST-T abnormality,131,1,1.5,,0,,0
+40va,61,1,nonanginal,120,0,0,normal,80,1,0.0,flat,,,3
+41va,40,1,asymptomatic,125,0,1,normal,165,0,0.0,,,none,1
+42va,61,1,asymptomatic,,0,1,ST-T abnormality,86,0,1.5,flat,,none,3
+43va,41,1,asymptomatic,104,0,0,ST-T abnormality,111,0,0.0,,,,0
+44va,57,1,asymptomatic,,277,1,ST-T abnormality,,,,,,,4
+45va,63,1,asymptomatic,136,0,0,normal,84,1,0.0,,,none,2
+46va,59,1,asymptomatic,122,233,0,normal,117,1,1.3,downsloping,,,1
+47va,51,1,asymptomatic,128,0,0,normal,107,0,0.0,,,,0
+48va,59,1,nonanginal,,0,0,normal,128,1,2.0,downsloping,,,2
+49va,42,1,nonanginal,134,240,,normal,160,0,0.0,,,,0
+50va,55,1,nonanginal,120,0,0,ST-T abnormality,125,1,2.5,flat,,none,1
+51va,63,0,atypical anginal,,0,0,normal,,,,,,,0
+52va,62,1,asymptomatic,152,153,0,ST-T abnormality,97,1,1.6,upsloping,,none,2
+53va,56,1,atypical anginal,124,224,1,normal,161,0,2.0,flat,,,0
+54va,53,1,asymptomatic,126,0,0,normal,106,0,0.0,,,,1
+55va,68,1,asymptomatic,138,0,0,normal,130,1,3.0,flat,,,2
+56va,53,1,asymptomatic,154,0,,ST-T abnormality,140,1,1.5,flat,,,2
+57va,60,1,nonanginal,,316,1,ST-T abnormality,,,,,,,3
+58va,62,1,atypical anginal,,0,0,normal,,,,,,,0
+59va,59,1,asymptomatic,178,0,1,LVH,120,1,0.0,,,none,1
+60va,51,1,asymptomatic,,218,1,LVH,,,,,,,0
+61va,61,1,asymptomatic,110,0,,normal,108,1,2.0,downsloping,,,2
+62va,57,1,asymptomatic,130,311,,ST-T abnormality,148,1,2.0,flat,,,1
+63va,56,1,nonanginal,170,0,0,LVH,123,1,2.5,,,,4
+64va,58,1,atypical anginal,126,0,1,normal,110,1,2.0,flat,,,2
+65va,69,1,nonanginal,140,0,,ST-T abnormality,118,0,2.5,downsloping,,,2
+66va,67,1,typical anginal,142,270,1,normal,125,0,2.5,upsloping,,,3
+67va,58,1,asymptomatic,120,0,0,LVH,106,1,1.5,downsloping,,none,1
+68va,65,1,asymptomatic,,0,0,normal,,,,,,,1
+69va,63,1,atypical anginal,,217,1,ST-T abnormality,,,,,,,1
+70va,55,1,atypical anginal,110,214,1,ST-T abnormality,180,0,,,,,0
+71va,57,1,asymptomatic,140,214,0,ST-T abnormality,144,1,2.0,flat,,reversible,2
+72va,65,1,typical anginal,,252,0,normal,,,,,,,0
+73va,54,1,asymptomatic,136,220,0,normal,140,1,3.0,flat,,,3
+74va,72,1,nonanginal,120,214,0,normal,102,1,1.0,flat,,,3
+75va,75,1,asymptomatic,170,203,1,ST-T abnormality,108,0,0.0,,,none,1
+76va,49,1,typical anginal,130,0,0,ST-T abnormality,145,0,3.0,flat,,,2
+77va,51,1,nonanginal,,339,0,normal,,,,,,,3
+78va,60,1,asymptomatic,142,216,0,normal,110,1,2.5,flat,,,2
+79va,64,0,asymptomatic,142,276,0,normal,140,1,1.0,flat,,none,1
+80va,58,1,asymptomatic,132,458,1,normal,69,0,1.0,downsloping,,,0
+81va,61,1,asymptomatic,146,241,0,normal,148,1,3.0,downsloping,,,2
+82va,67,1,asymptomatic,160,384,1,ST-T abnormality,130,1,0.0,flat,,,2
+83va,62,1,asymptomatic,135,297,0,normal,130,1,1.0,flat,,,2
+84va,65,1,asymptomatic,136,248,0,normal,140,1,4.0,downsloping,,,4
+85va,63,1,asymptomatic,130,308,0,normal,138,1,2.0,flat,,,2
+86va,69,1,asymptomatic,140,208,0,ST-T abnormality,140,1,2.0,,,,3
+87va,51,1,asymptomatic,,227,1,ST-T abnormality,,,,,,,0
+88va,62,1,asymptomatic,158,210,1,normal,112,1,3.0,downsloping,,,1
+89va,55,1,nonanginal,,245,1,ST-T abnormality,,,,,,,1
+90va,75,1,asymptomatic,136,225,0,normal,112,1,3.0,flat,,,3
+91va,40,1,nonanginal,106,240,0,normal,80,1,0.0,,,none,0
+92va,67,1,asymptomatic,120,0,1,normal,150,0,1.5,downsloping,,,3
+93va,58,1,asymptomatic,110,198,0,normal,110,0,0.0,,,,1
+94va,60,1,asymptomatic,,195,0,normal,,,,,,,0
+95va,63,1,asymptomatic,160,267,1,ST-T abnormality,88,1,2.0,,,,3
+96va,35,1,nonanginal,,161,0,ST-T abnormality,,,,,,,0
+97va,62,1,typical anginal,112,258,0,ST-T abnormality,150,1,,,,,1
+98va,43,1,asymptomatic,122,0,0,normal,120,0,0.5,upsloping,,,1
+99va,63,1,nonanginal,130,0,1,ST-T abnormality,160,0,3.0,flat,,,0
+100va,68,1,nonanginal,150,195,1,normal,132,0,0.0,,,reversible,1
+101va,65,1,asymptomatic,150,235,0,normal,120,1,1.5,flat,,,3
+102va,48,1,nonanginal,102,0,,ST-T abnormality,110,1,1.0,downsloping,,,1
+103va,63,1,asymptomatic,96,305,0,ST-T abnormality,121,1,1.0,upsloping,,,1
+104va,64,1,asymptomatic,130,223,0,ST-T abnormality,128,0,0.5,flat,,,0
+105va,61,1,asymptomatic,120,282,0,ST-T abnormality,135,1,4.0,downsloping,,reversible,3
+106va,50,1,asymptomatic,144,349,0,LVH,120,1,1.0,upsloping,,none,1
+107va,59,1,asymptomatic,124,,0,normal,117,1,1.0,flat,,,1
+108va,55,1,asymptomatic,150,160,0,ST-T abnormality,150,0,0.0,,,,0
+109va,45,1,nonanginal,,236,0,normal,,,,,,,0
+110va,65,1,asymptomatic,,312,0,LVH,,,,,,,3
+111va,61,1,atypical anginal,,283,0,normal,,,,,,,0
+112va,49,1,nonanginal,,142,0,normal,,,,,,,3
+113va,72,1,asymptomatic,,211,0,normal,,,,,,,1
+114va,50,1,asymptomatic,,218,0,normal,,,,,,,1
+115va,64,1,asymptomatic,,306,1,ST-T abnormality,,,,,,,3
+116va,55,1,asymptomatic,116,186,1,ST-T abnormality,102,0,0.0,,,,2
+117va,63,1,asymptomatic,110,252,0,ST-T abnormality,140,1,2.0,flat,,,2
+118va,59,1,asymptomatic,125,222,0,normal,135,1,2.5,downsloping,,,3
+119va,56,1,asymptomatic,,0,0,LVH,,,,,,,1
+120va,62,1,nonanginal,,0,1,ST-T abnormality,,,,,,,2
+121va,74,1,asymptomatic,150,258,1,ST-T abnormality,130,1,4.0,downsloping,,,3
+122va,54,1,asymptomatic,130,202,1,normal,112,1,2.0,flat,,,1
+123va,57,1,asymptomatic,110,197,0,LVH,100,0,0.0,,,,0
+124va,62,1,nonanginal,,204,0,ST-T abnormality,,,,,,,1
+125va,76,1,nonanginal,104,,0,LVH,120,0,3.5,downsloping,,,4
+126va,54,0,asymptomatic,138,274,0,normal,105,1,1.5,flat,,,1
+127va,70,1,asymptomatic,170,192,0,ST-T abnormality,129,1,3.0,downsloping,,,2
+128va,61,0,atypical anginal,140,298,1,normal,120,1,0.0,,,none,0
+129va,48,1,asymptomatic,,272,0,ST-T abnormality,,,,,,,0
+130va,48,1,nonanginal,132,220,1,ST-T abnormality,162,0,0.0,,,reversible,1
+131va,61,1,typical anginal,142,200,1,ST-T abnormality,100,0,1.5,downsloping,,,3
+132va,66,1,asymptomatic,112,261,0,normal,140,0,1.5,upsloping,,,1
+133va,68,1,typical anginal,,181,1,ST-T abnormality,,,,,,,0
+134va,55,1,asymptomatic,172,260,0,normal,73,0,2.0,,,,3
+135va,62,1,nonanginal,120,220,0,LVH,86,0,0.0,,,,0
+136va,71,1,nonanginal,,221,0,normal,,,,,,,3
+137va,74,1,typical anginal,,216,1,normal,,,,,,,3
+138va,53,1,nonanginal,155,175,1,ST-T abnormality,160,0,,,,reversible,0
+139va,58,1,nonanginal,150,219,0,ST-T abnormality,118,1,0.0,,,,2
+140va,75,1,asymptomatic,160,310,1,normal,112,1,2.0,downsloping,,none,0
+141va,56,1,nonanginal,,208,1,ST-T abnormality,,,,,,,4
+142va,58,1,nonanginal,,232,0,ST-T abnormality,,,,,,,2
+143va,64,1,asymptomatic,134,273,0,normal,102,1,4.0,downsloping,,,4
+144va,54,1,nonanginal,,203,0,ST-T abnormality,,,,,,,0
+145va,54,1,atypical anginal,,182,0,ST-T abnormality,,,,,,,0
+146va,59,1,asymptomatic,140,274,0,normal,154,1,2.0,flat,,,0
+147va,55,1,asymptomatic,,204,1,ST-T abnormality,,,,,,,1
+148va,57,1,asymptomatic,144,270,1,ST-T abnormality,160,1,2.0,flat,,,3
+149va,61,1,asymptomatic,,292,0,ST-T abnormality,,,,,,,3
+150va,41,1,asymptomatic,150,171,0,normal,128,1,1.5,flat,,,0
+151va,71,1,asymptomatic,130,221,0,ST-T abnormality,115,1,0.0,,,,3
+152va,38,1,asymptomatic,110,289,0,normal,105,1,1.5,downsloping,,,1
+153va,55,1,asymptomatic,158,217,0,normal,110,1,2.5,flat,,,1
+154va,56,1,asymptomatic,128,223,0,ST-T abnormality,119,1,2.0,downsloping,,,2
+155va,69,1,asymptomatic,,,1,normal,,,,,,,2
+156va,64,1,asymptomatic,150,193,0,ST-T abnormality,135,1,0.5,flat,,,2
+157va,72,1,asymptomatic,160,,1,LVH,130,0,1.5,,,,2
+158va,69,1,asymptomatic,,210,1,ST-T abnormality,,,,,,,2
+159va,56,1,asymptomatic,,282,1,normal,,,,,,,1
+160va,62,1,asymptomatic,,170,0,ST-T abnormality,120,1,3.0,,,,4
+161va,67,1,asymptomatic,,369,0,normal,,,,,,,3
+162va,57,1,asymptomatic,156,173,0,LVH,119,1,3.0,downsloping,,,3
+163va,69,1,asymptomatic,,289,1,ST-T abnormality,,,,,,,3
+164va,51,1,asymptomatic,,,1,LVH,,,,,,none,1
+165va,48,1,asymptomatic,140,,0,normal,159,1,1.5,upsloping,,,3
+166va,69,1,asymptomatic,122,216,1,LVH,84,1,0.0,,,none,2
+167va,69,1,nonanginal,,271,0,LVH,,,,,,,0
+168va,64,1,asymptomatic,,244,1,ST-T abnormality,,,,,,,2
+169va,57,1,atypical anginal,180,285,1,ST-T abnormality,120,0,0.8,,,,1
+170va,53,1,asymptomatic,124,243,0,normal,122,1,2.0,flat,,none,1
+171va,37,1,nonanginal,118,240,0,LVH,165,0,1.0,flat,,fixed,0
+172va,67,1,asymptomatic,140,219,0,ST-T abnormality,122,1,2.0,flat,,none,3
+173va,74,1,nonanginal,140,237,1,normal,94,0,0.0,,,,1
+174va,63,1,atypical anginal,,165,0,ST-T abnormality,,,,,,,0
+175va,58,1,asymptomatic,100,213,0,ST-T abnormality,110,0,0.0,,,,0
+176va,61,1,asymptomatic,190,287,1,LVH,150,1,2.0,downsloping,,,4
+177va,64,1,asymptomatic,130,258,1,LVH,130,0,0.0,,,reversible,2
+178va,58,1,asymptomatic,160,256,1,LVH,113,1,1.0,upsloping,,,3
+179va,60,1,asymptomatic,130,186,1,LVH,140,1,0.5,flat,,,1
+180va,57,1,asymptomatic,122,264,0,LVH,100,0,0.0,,,,1
+181va,55,1,nonanginal,,,0,ST-T abnormality,,,,,,,0
+182va,55,1,asymptomatic,120,226,0,LVH,127,1,1.7,downsloping,,none,1
+183va,56,1,asymptomatic,130,203,1,normal,98,0,1.5,flat,,none,1
+184va,57,1,asymptomatic,130,207,0,ST-T abnormality,96,1,1.0,flat,,,0
+185va,61,1,nonanginal,,284,0,normal,,,,,,,1
+186va,61,1,nonanginal,120,337,0,normal,98,1,0.0,,,,3
+188va,74,1,asymptomatic,155,310,0,normal,112,1,1.5,downsloping,,,2
+189va,68,1,nonanginal,134,254,1,normal,151,1,0.0,,,fixed,0
+190va,51,0,asymptomatic,114,258,1,LVH,96,0,1.0,upsloping,,,0
+191va,62,1,asymptomatic,160,254,1,ST-T abnormality,108,1,3.0,flat,,,4
+192va,53,1,asymptomatic,144,300,1,ST-T abnormality,128,1,1.5,flat,,,3
+193va,62,1,asymptomatic,158,170,0,ST-T abnormality,138,1,0.0,,,,1
+194va,46,1,asymptomatic,134,310,0,normal,126,0,0.0,,,fixed,2
+195va,54,0,asymptomatic,127,333,1,ST-T abnormality,154,0,0.0,,,,1
+196va,62,1,typical anginal,,139,0,ST-T abnormality,,,,,,,0
+197va,55,1,asymptomatic,122,223,1,ST-T abnormality,100,0,0.0,,,reversible,2
+198va,58,1,asymptomatic,,385,1,LVH,,,,,,,0
+199va,62,1,atypical anginal,120,254,0,LVH,93,1,0.0,,,,1
+0hu,28,1,atypical anginal,130,132,0,LVH,185,0,0.0,,,,0
+1hu,29,1,atypical anginal,120,243,0,normal,160,0,0.0,,,,0
+2hu,29,1,atypical anginal,140,,0,normal,170,0,0.0,,,,0
+3hu,30,0,typical anginal,170,237,0,ST-T abnormality,170,0,0.0,,,reversible,0
+4hu,31,0,atypical anginal,100,219,0,ST-T abnormality,150,0,0.0,,,,0
+5hu,32,0,atypical anginal,105,198,0,normal,165,0,0.0,,,,0
+6hu,32,1,atypical anginal,110,225,0,normal,184,0,0.0,,,,0
+7hu,32,1,atypical anginal,125,254,0,normal,155,0,0.0,,,,0
+8hu,33,1,nonanginal,120,298,0,normal,185,0,0.0,,,,0
+9hu,34,0,atypical anginal,130,161,0,normal,190,0,0.0,,,,0
+10hu,34,1,atypical anginal,150,214,0,ST-T abnormality,168,0,0.0,,,,0
+11hu,34,1,atypical anginal,98,220,0,normal,150,0,0.0,,,,0
+12hu,35,0,typical anginal,120,160,0,ST-T abnormality,185,0,0.0,,,,0
+13hu,35,0,asymptomatic,140,167,0,normal,150,0,0.0,,,,0
+14hu,35,1,atypical anginal,120,308,0,LVH,180,0,0.0,,,,0
+15hu,35,1,atypical anginal,150,264,0,normal,168,0,0.0,,,,0
+16hu,36,1,atypical anginal,120,166,0,normal,180,0,0.0,,,,0
+17hu,36,1,nonanginal,112,340,0,normal,184,0,1.0,flat,,fixed,0
+18hu,36,1,nonanginal,130,209,0,normal,178,0,0.0,,,,0
+19hu,36,1,nonanginal,150,160,0,normal,172,0,0.0,,,,0
+20hu,37,0,atypical anginal,120,260,0,normal,130,0,0.0,,,,0
+21hu,37,0,nonanginal,130,211,0,normal,142,0,0.0,,,,0
+22hu,37,0,asymptomatic,130,173,0,ST-T abnormality,184,0,0.0,,,,0
+23hu,37,1,atypical anginal,130,283,0,ST-T abnormality,98,0,0.0,,,,0
+24hu,37,1,nonanginal,130,194,0,normal,150,0,0.0,,,,0
+25hu,37,1,asymptomatic,120,223,0,normal,168,0,0.0,,,fixed,0
+26hu,37,1,asymptomatic,130,315,0,normal,158,0,0.0,,,,0
+27hu,38,0,atypical anginal,120,275,,normal,129,0,0.0,,,,0
+28hu,38,1,atypical anginal,140,297,0,normal,150,0,0.0,,,,0
+29hu,38,1,nonanginal,145,292,0,normal,130,0,0.0,,,,0
+30hu,39,0,nonanginal,110,182,0,ST-T abnormality,180,0,0.0,,,,0
+31hu,39,1,atypical anginal,120,,0,ST-T abnormality,146,0,2.0,upsloping,,,0
+32hu,39,1,atypical anginal,120,200,0,normal,160,1,1.0,flat,,,0
+33hu,39,1,atypical anginal,120,204,0,normal,145,0,0.0,,,,0
+34hu,39,1,atypical anginal,130,,0,normal,120,0,0.0,,,,0
+35hu,39,1,atypical anginal,190,241,0,normal,106,0,0.0,,,,0
+36hu,39,1,nonanginal,120,339,0,normal,170,0,0.0,,,,0
+37hu,39,1,nonanginal,160,147,1,normal,160,0,0.0,,,,0
+38hu,39,1,asymptomatic,110,273,0,normal,132,0,0.0,,,,0
+39hu,39,1,asymptomatic,130,307,0,normal,140,0,0.0,,,,0
+40hu,40,1,atypical anginal,130,275,0,normal,150,0,0.0,,,,0
+41hu,40,1,atypical anginal,140,289,0,normal,172,0,0.0,,,,0
+42hu,40,1,nonanginal,130,215,0,normal,138,0,0.0,,,,0
+43hu,40,1,nonanginal,130,281,0,normal,167,0,0.0,,,,0
+44hu,40,1,nonanginal,140,,0,normal,188,0,0.0,,,,0
+45hu,41,0,atypical anginal,110,250,0,ST-T abnormality,142,0,0.0,,,,0
+46hu,41,0,atypical anginal,125,184,0,normal,180,0,0.0,,,,0
+47hu,41,0,atypical anginal,130,245,0,normal,150,0,0.0,,,,0
+48hu,41,1,atypical anginal,120,291,0,ST-T abnormality,160,0,0.0,,,,0
+49hu,41,1,atypical anginal,120,295,0,normal,170,0,0.0,,,,0
+50hu,41,1,atypical anginal,125,269,0,normal,144,0,0.0,,,,0
+51hu,41,1,asymptomatic,112,250,0,normal,142,0,0.0,,,,0
+52hu,42,0,nonanginal,115,211,0,ST-T abnormality,137,0,0.0,,,,0
+53hu,42,1,atypical anginal,120,196,0,normal,150,0,0.0,,,,0
+54hu,42,1,atypical anginal,120,198,0,normal,155,0,0.0,,,,0
+55hu,42,1,atypical anginal,150,268,0,normal,136,0,0.0,,,,0
+56hu,42,1,nonanginal,120,228,0,normal,152,1,1.5,flat,,,0
+57hu,42,1,nonanginal,160,147,0,normal,146,0,0.0,,,,0
+58hu,42,1,asymptomatic,140,358,0,normal,170,0,0.0,,,,0
+59hu,43,0,typical anginal,100,223,0,normal,142,0,0.0,,,,0
+60hu,43,0,atypical anginal,120,201,0,normal,165,0,0.0,,,,0
+61hu,43,0,atypical anginal,120,215,0,ST-T abnormality,175,0,0.0,,,,0
+62hu,43,0,atypical anginal,120,249,0,ST-T abnormality,176,0,0.0,,,,0
+63hu,43,0,atypical anginal,120,266,0,normal,118,0,0.0,,,,0
+64hu,43,0,atypical anginal,150,186,0,normal,154,0,0.0,,,,0
+65hu,43,0,nonanginal,150,,0,normal,175,0,0.0,,,fixed,0
+66hu,43,1,atypical anginal,142,207,0,normal,138,0,0.0,,,,0
+67hu,44,0,asymptomatic,120,218,0,ST-T abnormality,115,0,0.0,,,,0
+68hu,44,1,atypical anginal,120,184,0,normal,142,0,1.0,flat,,,0
+69hu,44,1,atypical anginal,130,215,0,normal,135,0,0.0,,,,0
+70hu,44,1,asymptomatic,150,412,0,normal,170,0,0.0,,,,0
+71hu,45,0,atypical anginal,130,237,0,normal,170,0,0.0,,,,0
+72hu,45,0,atypical anginal,180,,0,normal,180,0,0.0,,,,0
+73hu,45,0,asymptomatic,132,297,0,normal,144,0,0.0,,,,0
+74hu,45,1,atypical anginal,140,224,1,normal,122,0,0.0,,,,0
+75hu,45,1,nonanginal,135,,0,normal,110,0,0.0,,,,0
+76hu,45,1,asymptomatic,120,225,0,normal,140,0,0.0,,,,0
+77hu,45,1,asymptomatic,140,224,0,normal,144,0,0.0,,,,0
+78hu,46,0,asymptomatic,130,238,0,normal,90,0,0.0,,,,0
+79hu,46,1,atypical anginal,140,275,0,normal,165,1,0.0,,,,0
+80hu,46,1,nonanginal,120,230,0,normal,150,0,0.0,,,,0
+81hu,46,1,nonanginal,150,163,,normal,116,0,0.0,,,,0
+82hu,46,1,asymptomatic,110,238,0,ST-T abnormality,140,1,1.0,flat,,fixed,0
+83hu,46,1,asymptomatic,110,240,0,ST-T abnormality,140,0,0.0,,,fixed,0
+84hu,46,1,asymptomatic,180,280,0,ST-T abnormality,120,0,0.0,,,,0
+85hu,47,0,atypical anginal,140,257,0,normal,135,0,1.0,upsloping,,,0
+86hu,47,0,nonanginal,130,,0,normal,145,0,2.0,flat,,,0
+87hu,47,1,typical anginal,110,249,0,normal,150,0,0.0,,,,0
+88hu,47,1,atypical anginal,160,263,0,normal,174,0,0.0,,,,0
+89hu,47,1,asymptomatic,140,276,1,normal,125,1,0.0,,,,0
+90hu,48,0,atypical anginal,,308,0,ST-T abnormality,,,2.0,upsloping,,,0
+91hu,48,0,atypical anginal,120,,1,ST-T abnormality,148,0,0.0,,,,0
+92hu,48,0,atypical anginal,120,284,0,normal,120,0,0.0,,,,0
+93hu,48,0,nonanginal,120,195,0,normal,125,0,0.0,,,,0
+94hu,48,0,asymptomatic,108,163,0,normal,175,0,2.0,upsloping,,,0
+95hu,48,0,asymptomatic,120,254,0,ST-T abnormality,110,0,0.0,,,,0
+96hu,48,0,asymptomatic,150,227,0,normal,130,1,1.0,flat,,,0
+97hu,48,1,atypical anginal,100,,0,normal,100,0,0.0,,,,0
+98hu,48,1,atypical anginal,130,245,0,normal,160,0,0.0,,,,0
+99hu,48,1,atypical anginal,140,238,0,normal,118,0,0.0,,,,0
+100hu,48,1,nonanginal,110,211,0,normal,138,0,0.0,,,reversible,0
+101hu,49,0,atypical anginal,110,,0,normal,160,0,0.0,,,,0
+103hu,49,0,atypical anginal,124,201,0,normal,164,0,0.0,,,,0
+104hu,49,0,nonanginal,130,207,0,ST-T abnormality,135,0,0.0,,,,0
+105hu,49,1,atypical anginal,100,253,0,normal,174,0,0.0,,,,0
+106hu,49,1,nonanginal,140,187,0,normal,172,0,0.0,,,,0
+107hu,49,1,asymptomatic,120,297,,normal,132,0,1.0,flat,,,0
+108hu,49,1,asymptomatic,140,,0,normal,130,0,0.0,,,,0
+109hu,50,0,atypical anginal,110,202,0,normal,145,0,0.0,,,,0
+110hu,50,0,asymptomatic,120,328,0,normal,110,1,1.0,flat,,,0
+111hu,50,1,atypical anginal,120,168,0,normal,160,0,0.0,,0,,0
+112hu,50,1,atypical anginal,140,216,0,normal,170,0,0.0,,,fixed,0
+113hu,50,1,atypical anginal,170,209,0,ST-T abnormality,116,0,0.0,,,,0
+114hu,50,1,asymptomatic,140,129,0,normal,135,0,0.0,,,,0
+115hu,50,1,asymptomatic,150,215,0,normal,140,1,0.0,,,,0
+116hu,51,0,atypical anginal,160,194,0,normal,170,0,0.0,,,,0
+117hu,51,0,nonanginal,110,190,0,normal,120,0,0.0,,,,0
+118hu,51,0,nonanginal,130,220,0,normal,160,1,2.0,upsloping,,,0
+119hu,51,0,nonanginal,150,200,0,normal,120,0,0.5,upsloping,,,0
+120hu,51,1,atypical anginal,125,188,0,normal,145,0,0.0,,,,0
+121hu,51,1,atypical anginal,130,224,0,normal,150,0,0.0,,,,0
+122hu,51,1,asymptomatic,130,179,0,normal,100,0,0.0,,,none,0
+123hu,52,0,atypical anginal,120,210,0,normal,148,0,0.0,,,,0
+124hu,52,0,atypical anginal,140,,0,normal,140,0,0.0,,,,0
+125hu,52,0,nonanginal,125,272,0,normal,139,0,0.0,,,,0
+126hu,52,0,asymptomatic,130,180,0,normal,140,1,1.5,flat,,,0
+127hu,52,1,atypical anginal,120,284,0,normal,118,0,0.0,,,,0
+128hu,52,1,atypical anginal,140,100,0,normal,138,1,0.0,,,,0
+129hu,52,1,atypical anginal,160,196,0,normal,165,0,0.0,,,,0
+130hu,52,1,nonanginal,140,259,0,ST-T abnormality,170,0,0.0,,,,0
+131hu,53,0,atypical anginal,113,468,,normal,127,0,0.0,,,,0
+132hu,53,0,atypical anginal,140,216,0,normal,142,1,2.0,flat,,,0
+133hu,53,0,nonanginal,120,274,0,normal,130,0,0.0,,,,0
+134hu,53,1,atypical anginal,120,,0,normal,132,0,0.0,,,,0
+135hu,53,1,atypical anginal,140,320,0,normal,162,0,0.0,,,,0
+136hu,53,1,nonanginal,120,195,0,normal,140,0,0.0,,,,0
+137hu,53,1,asymptomatic,124,260,0,ST-T abnormality,112,1,3.0,flat,,,0
+138hu,53,1,asymptomatic,130,182,0,normal,148,0,0.0,,,,0
+139hu,53,1,asymptomatic,140,243,0,normal,155,0,0.0,,,,0
+140hu,54,0,atypical anginal,120,221,0,normal,138,0,1.0,upsloping,,,0
+141hu,54,0,atypical anginal,120,230,1,normal,140,0,0.0,,,,0
+142hu,54,0,atypical anginal,120,273,0,normal,150,0,1.5,flat,,,0
+143hu,54,0,atypical anginal,130,253,0,ST-T abnormality,155,0,0.0,,,,0
+144hu,54,0,atypical anginal,140,309,,ST-T abnormality,140,0,0.0,,,,0
+145hu,54,0,atypical anginal,150,230,0,normal,130,0,0.0,,,,0
+146hu,54,0,atypical anginal,160,312,0,normal,130,0,0.0,,,,0
+147hu,54,1,typical anginal,120,171,0,normal,137,0,2.0,upsloping,,,0
+148hu,54,1,atypical anginal,110,208,0,normal,142,0,0.0,,,,0
+149hu,54,1,atypical anginal,120,238,0,normal,154,0,0.0,,,,0
+150hu,54,1,atypical anginal,120,246,0,normal,110,0,0.0,,,,0
+151hu,54,1,atypical anginal,160,195,0,ST-T abnormality,130,0,1.0,upsloping,,,0
+152hu,54,1,atypical anginal,160,305,0,normal,175,0,0.0,,,,0
+153hu,54,1,nonanginal,120,217,0,normal,137,0,0.0,,,,0
+154hu,54,1,nonanginal,150,,0,normal,122,0,0.0,,,,0
+155hu,54,1,asymptomatic,150,365,0,ST-T abnormality,134,0,1.0,upsloping,,,0
+156hu,55,0,atypical anginal,110,344,0,ST-T abnormality,160,0,0.0,,,,0
+157hu,55,0,atypical anginal,122,320,0,normal,155,0,0.0,,,,0
+158hu,55,0,atypical anginal,130,394,0,LVH,150,0,0.0,,,,0
+159hu,55,1,atypical anginal,120,256,1,normal,137,0,0.0,,,none,0
+160hu,55,1,atypical anginal,140,196,0,normal,150,0,0.0,,,none,0
+161hu,55,1,atypical anginal,145,326,0,normal,155,0,0.0,,,,0
+162hu,55,1,nonanginal,110,277,0,normal,160,0,0.0,,,,0
+163hu,55,1,nonanginal,120,220,0,LVH,134,0,0.0,,,,0
+164hu,55,1,asymptomatic,120,270,0,normal,140,0,0.0,,,,0
+165hu,55,1,asymptomatic,140,229,0,normal,110,1,0.5,flat,,,0
+166hu,56,0,nonanginal,130,219,,ST-T abnormality,164,0,0.0,,,none,0
+167hu,56,1,atypical anginal,130,184,0,normal,100,0,0.0,,,,0
+168hu,56,1,nonanginal,130,,0,normal,114,0,0.0,,,,0
+169hu,56,1,nonanginal,130,276,0,normal,128,1,1.0,upsloping,,reversible,0
+170hu,56,1,asymptomatic,120,85,0,normal,140,0,0.0,,,,0
+171hu,57,0,typical anginal,130,308,0,normal,98,0,1.0,flat,,,0
+172hu,57,0,asymptomatic,180,347,0,ST-T abnormality,126,1,0.8,flat,,,0
+173hu,57,1,atypical anginal,140,260,1,normal,140,0,0.0,,,reversible,0
+174hu,58,1,atypical anginal,130,230,0,normal,150,0,0.0,,,,0
+175hu,58,1,atypical anginal,130,251,0,normal,110,0,0.0,,,,0
+176hu,58,1,nonanginal,140,179,0,normal,160,0,0.0,,,,0
+177hu,58,1,asymptomatic,135,222,0,normal,100,0,0.0,,,,0
+178hu,59,0,atypical anginal,130,188,0,normal,124,0,1.0,flat,,,0
+179hu,59,1,atypical anginal,140,287,0,normal,150,0,0.0,,,,0
+180hu,59,1,nonanginal,130,318,0,normal,120,1,1.0,flat,,fixed,0
+181hu,59,1,nonanginal,180,213,0,normal,100,0,0.0,,,,0
+182hu,59,1,asymptomatic,140,,0,normal,140,0,0.0,,0,,0
+183hu,60,1,nonanginal,120,246,0,LVH,135,0,0.0,,,,0
+184hu,61,0,asymptomatic,130,294,0,ST-T abnormality,120,1,1.0,flat,,,0
+185hu,61,1,asymptomatic,125,292,0,ST-T abnormality,115,1,0.0,,,,0
+186hu,62,0,typical anginal,160,193,0,normal,116,0,0.0,,,,0
+187hu,62,1,atypical anginal,140,271,0,normal,152,0,1.0,upsloping,,,0
+188hu,31,1,asymptomatic,120,270,0,normal,153,1,1.5,flat,,,1
+189hu,33,0,asymptomatic,100,246,0,normal,150,1,1.0,flat,,,1
+190hu,34,1,typical anginal,140,156,0,normal,180,0,0.0,,,,1
+191hu,35,1,atypical anginal,110,257,0,normal,140,0,0.0,,,,1
+192hu,36,1,atypical anginal,120,267,0,normal,160,0,3.0,flat,,,1
+193hu,37,1,asymptomatic,140,207,0,normal,130,1,1.5,flat,,,1
+194hu,38,1,asymptomatic,110,196,0,normal,166,0,0.0,,,,1
+195hu,38,1,asymptomatic,120,282,0,normal,170,0,0.0,,,,1
+196hu,38,1,asymptomatic,92,117,0,normal,134,1,2.5,flat,,,1
+197hu,40,1,asymptomatic,120,466,,normal,152,1,1.0,flat,,reversible,1
+198hu,41,1,asymptomatic,110,289,0,normal,170,0,0.0,,,reversible,1
+199hu,41,1,asymptomatic,120,237,,normal,138,1,1.0,flat,,,1
+200hu,43,1,asymptomatic,150,247,0,normal,130,1,2.0,flat,,,1
+201hu,46,1,asymptomatic,110,202,0,normal,150,1,0.0,,,,1
+202hu,46,1,asymptomatic,118,186,0,normal,124,0,0.0,,,none,1
+203hu,46,1,asymptomatic,120,277,0,normal,125,1,1.0,flat,,,1
+204hu,47,1,nonanginal,140,193,0,normal,145,1,1.0,flat,,,1
+205hu,47,1,asymptomatic,150,226,0,normal,98,1,1.5,flat,0,none,1
+206hu,48,1,asymptomatic,106,263,1,normal,110,0,0.0,,,,1
+207hu,48,1,asymptomatic,120,260,0,normal,115,0,2.0,flat,,,1
+208hu,48,1,asymptomatic,160,268,0,normal,103,1,1.0,flat,,,1
+209hu,49,0,nonanginal,160,180,0,normal,156,0,1.0,flat,,,1
+210hu,49,1,nonanginal,115,265,0,normal,175,0,0.0,,,,1
+211hu,49,1,asymptomatic,130,206,0,normal,170,0,0.0,,,,1
+212hu,50,0,nonanginal,140,288,0,normal,140,1,0.0,,,none,1
+213hu,50,1,asymptomatic,145,264,0,normal,150,0,0.0,,,,1
+214hu,51,0,asymptomatic,160,303,0,normal,150,1,1.0,flat,,,1
+215hu,52,1,asymptomatic,130,225,0,normal,120,1,2.0,flat,,,1
+216hu,54,1,asymptomatic,125,216,0,normal,140,0,0.0,,,,1
+217hu,54,1,asymptomatic,125,224,0,normal,122,0,2.0,flat,,,1
+218hu,55,1,asymptomatic,140,201,0,normal,130,1,3.0,flat,,,1
+219hu,57,1,atypical anginal,140,265,0,ST-T abnormality,145,1,1.0,flat,,,1
+220hu,58,1,nonanginal,130,213,0,ST-T abnormality,140,0,0.0,,,reversible,1
+221hu,59,0,asymptomatic,130,338,1,ST-T abnormality,130,1,1.5,flat,,,1
+222hu,60,1,asymptomatic,100,248,0,normal,125,0,1.0,flat,,,1
+223hu,63,1,asymptomatic,150,223,0,normal,115,0,0.0,,,,1
+224hu,65,1,asymptomatic,140,306,1,normal,87,1,1.5,flat,,,1
+225hu,32,1,asymptomatic,118,529,0,normal,130,0,0.0,,,,1
+226hu,38,1,asymptomatic,110,,0,normal,150,1,1.0,flat,,,1
+227hu,39,1,asymptomatic,110,280,0,normal,150,0,0.0,,,reversible,1
+228hu,40,0,asymptomatic,150,392,0,normal,130,0,2.0,flat,,reversible,1
+229hu,43,1,typical anginal,120,291,0,ST-T abnormality,155,0,0.0,,,,1
+230hu,45,1,asymptomatic,130,219,0,ST-T abnormality,130,1,1.0,flat,,,1
+231hu,46,1,asymptomatic,120,231,0,normal,115,1,0.0,,,,1
+232hu,46,1,asymptomatic,130,222,0,normal,112,0,0.0,,,,1
+233hu,48,1,asymptomatic,122,275,1,ST-T abnormality,150,1,2.0,downsloping,,,1
+234hu,48,1,asymptomatic,160,193,0,normal,102,1,3.0,flat,,,1
+235hu,48,1,asymptomatic,160,329,0,normal,92,1,1.5,flat,,,1
+236hu,48,1,asymptomatic,160,355,0,normal,99,1,2.0,flat,,,1
+237hu,50,1,asymptomatic,130,233,0,normal,121,1,2.0,flat,,none,1
+238hu,52,1,asymptomatic,120,182,0,normal,150,0,0.0,,,,1
+239hu,52,1,asymptomatic,170,,0,normal,126,1,1.5,flat,,,1
+240hu,53,1,asymptomatic,120,246,0,normal,116,1,0.0,,,,1
+241hu,54,1,nonanginal,120,237,0,normal,150,1,1.5,,,none,1
+242hu,54,1,asymptomatic,130,242,0,normal,91,1,1.0,flat,,,1
+243hu,54,1,asymptomatic,130,603,1,normal,125,1,1.0,flat,,,1
+244hu,54,1,asymptomatic,140,,0,normal,118,1,0.0,,,,1
+245hu,54,1,asymptomatic,200,198,0,normal,142,1,2.0,flat,,,1
+246hu,55,1,asymptomatic,140,268,0,normal,128,1,1.5,flat,,,1
+247hu,56,1,asymptomatic,150,213,1,normal,125,1,1.0,flat,,,1
+248hu,57,1,asymptomatic,150,255,0,normal,92,1,3.0,flat,,,1
+249hu,58,1,nonanginal,160,211,1,ST-T abnormality,92,0,0.0,,,,1
+250hu,58,1,asymptomatic,130,263,0,normal,140,1,2.0,flat,,,1
+251hu,41,1,asymptomatic,130,172,0,ST-T abnormality,130,0,2.0,flat,,,1
+252hu,43,1,asymptomatic,120,175,0,normal,120,1,1.0,flat,,none,1
+253hu,44,1,atypical anginal,150,288,0,normal,150,1,3.0,flat,,,1
+254hu,44,1,asymptomatic,130,290,0,normal,100,1,2.0,flat,,,1
+255hu,46,1,typical anginal,140,272,1,normal,175,0,2.0,flat,,,1
+256hu,47,0,nonanginal,135,248,1,normal,170,0,0.0,,,,1
+257hu,48,0,asymptomatic,138,214,0,normal,108,1,1.5,flat,,,1
+258hu,49,1,asymptomatic,130,341,0,normal,120,1,1.0,flat,,,1
+259hu,49,1,asymptomatic,140,234,0,normal,140,1,1.0,flat,,,1
+260hu,51,1,nonanginal,135,160,0,normal,150,0,2.0,flat,,,1
+261hu,52,1,asymptomatic,112,342,0,ST-T abnormality,96,1,1.0,flat,,,1
+262hu,52,1,asymptomatic,130,298,0,normal,110,1,1.0,flat,,,1
+263hu,52,1,asymptomatic,140,404,0,normal,124,1,2.0,flat,,,1
+264hu,52,1,asymptomatic,160,246,0,ST-T abnormality,82,1,4.0,flat,,,1
+265hu,53,1,nonanginal,145,518,0,normal,130,0,0.0,,,,1
+266hu,53,1,asymptomatic,180,285,0,ST-T abnormality,120,1,1.5,flat,,,1
+267hu,54,1,asymptomatic,140,216,0,normal,105,0,1.5,flat,,,1
+268hu,55,1,typical anginal,140,295,0,,136,0,0.0,,,,1
+269hu,55,1,atypical anginal,160,292,1,normal,143,1,2.0,flat,,,1
+270hu,55,1,asymptomatic,145,248,0,normal,96,1,2.0,flat,,,1
+271hu,56,0,atypical anginal,120,279,0,normal,150,0,1.0,flat,,,1
+272hu,56,1,asymptomatic,150,230,0,ST-T abnormality,124,1,1.5,flat,,,1
+273hu,56,1,asymptomatic,170,388,0,ST-T abnormality,122,1,2.0,flat,,,1
+274hu,58,1,atypical anginal,136,164,0,ST-T abnormality,99,1,2.0,flat,,,1
+275hu,59,1,asymptomatic,130,,0,normal,125,0,0.0,,,,1
+276hu,59,1,asymptomatic,140,264,1,LVH,119,1,0.0,,,,1
+277hu,65,1,asymptomatic,170,263,1,normal,112,1,2.0,flat,,,1
+278hu,66,1,asymptomatic,140,,0,normal,94,1,1.0,flat,,,1
+279hu,41,1,asymptomatic,120,336,0,normal,118,1,3.0,flat,,,1
+280hu,43,1,asymptomatic,140,288,0,normal,135,1,2.0,flat,,,1
+281hu,44,1,asymptomatic,135,491,0,normal,135,0,0.0,,,,1
+282hu,47,0,asymptomatic,120,205,0,normal,98,1,2.0,flat,,reversible,1
+283hu,47,1,asymptomatic,160,291,0,ST-T abnormality,158,1,3.0,flat,,,1
+284hu,49,1,asymptomatic,128,212,0,normal,96,1,0.0,,,,1
+285hu,49,1,asymptomatic,150,222,0,normal,122,0,2.0,flat,,,1
+286hu,50,1,asymptomatic,140,231,0,ST-T abnormality,140,1,5.0,flat,,,1
+287hu,50,1,asymptomatic,140,341,0,ST-T abnormality,125,1,2.5,flat,,,1
+288hu,52,1,asymptomatic,140,266,0,normal,134,1,2.0,flat,,,1
+289hu,52,1,asymptomatic,160,331,0,normal,94,1,2.5,,,,1
+290hu,54,0,nonanginal,130,294,0,ST-T abnormality,100,1,0.0,flat,,,1
+291hu,56,1,asymptomatic,155,342,1,normal,150,1,3.0,flat,,,1
+292hu,58,0,atypical anginal,180,393,0,normal,110,1,1.0,flat,,none,1
+293hu,65,1,asymptomatic,130,275,0,ST-T abnormality,115,1,1.0,flat,,,1
+0cl,63,1,typical anginal,145,233,1,LVH,150,0,2.3,downsloping,0,reversible,0
+1cl,67,1,asymptomatic,160,286,0,LVH,108,1,1.5,flat,3,fixed,2
+2cl,67,1,asymptomatic,120,229,0,LVH,129,1,2.6,flat,2,none,1
+3cl,37,1,nonanginal,130,250,0,normal,187,0,3.5,downsloping,0,fixed,0
+4cl,41,0,atypical anginal,130,204,0,LVH,172,0,1.4,upsloping,0,fixed,0
+5cl,56,1,atypical anginal,120,236,0,normal,178,0,0.8,upsloping,0,fixed,0
+6cl,62,0,asymptomatic,140,268,0,LVH,160,0,3.6,downsloping,2,fixed,3
+7cl,57,0,asymptomatic,120,354,0,normal,163,1,0.6,upsloping,0,fixed,0
+8cl,63,1,asymptomatic,130,254,0,LVH,147,0,1.4,flat,1,none,2
+9cl,53,1,asymptomatic,140,203,1,LVH,155,1,3.1,downsloping,0,none,1
+10cl,57,1,asymptomatic,140,192,0,normal,148,0,0.4,flat,0,reversible,0
+11cl,56,0,atypical anginal,140,294,0,LVH,153,0,1.3,flat,0,fixed,0
+12cl,56,1,nonanginal,130,256,1,LVH,142,1,0.6,flat,1,reversible,2
+13cl,44,1,atypical anginal,120,263,0,normal,173,0,0.0,upsloping,0,none,0
+14cl,52,1,nonanginal,172,199,1,normal,162,0,0.5,upsloping,0,none,0
+15cl,57,1,nonanginal,150,168,0,normal,174,0,1.6,upsloping,0,fixed,0
+16cl,48,1,atypical anginal,110,229,0,normal,168,0,1.0,downsloping,0,none,1
+17cl,54,1,asymptomatic,140,239,0,normal,160,0,1.2,upsloping,0,fixed,0
+18cl,48,0,nonanginal,130,275,0,normal,139,0,0.2,upsloping,0,fixed,0
+19cl,49,1,atypical anginal,130,266,0,normal,171,0,0.6,upsloping,0,fixed,0
+20cl,64,1,typical anginal,110,211,0,LVH,144,1,1.8,flat,0,fixed,0
+21cl,58,0,typical anginal,150,283,1,LVH,162,0,1.0,upsloping,0,fixed,0
+22cl,58,1,atypical anginal,120,284,0,LVH,160,0,1.8,flat,0,fixed,1
+23cl,58,1,nonanginal,132,224,0,LVH,173,0,3.2,upsloping,2,none,3
+24cl,60,1,asymptomatic,130,206,0,LVH,132,1,2.4,flat,2,none,4
+25cl,50,0,nonanginal,120,219,0,normal,158,0,1.6,flat,0,fixed,0
+26cl,58,0,nonanginal,120,340,0,normal,172,0,0.0,upsloping,0,fixed,0
+27cl,66,0,typical anginal,150,226,0,normal,114,0,2.6,downsloping,0,fixed,0
+28cl,43,1,asymptomatic,150,247,0,normal,171,0,1.5,upsloping,0,fixed,0
+29cl,40,1,asymptomatic,110,167,0,LVH,114,1,2.0,flat,0,none,3
+30cl,69,0,typical anginal,140,239,0,normal,151,0,1.8,upsloping,2,fixed,0
+31cl,60,1,asymptomatic,117,230,1,normal,160,1,1.4,upsloping,2,none,2
+32cl,64,1,nonanginal,140,335,0,normal,158,0,0.0,upsloping,0,fixed,1
+33cl,59,1,asymptomatic,135,234,0,normal,161,0,0.5,flat,0,none,0
+34cl,44,1,nonanginal,130,233,0,normal,179,1,0.4,upsloping,0,fixed,0
+35cl,42,1,asymptomatic,140,226,0,normal,178,0,0.0,upsloping,0,fixed,0
+36cl,43,1,asymptomatic,120,177,0,LVH,120,1,2.5,flat,0,none,3
+37cl,57,1,asymptomatic,150,276,0,LVH,112,1,0.6,flat,1,reversible,1
+38cl,55,1,asymptomatic,132,353,0,normal,132,1,1.2,flat,1,none,3
+39cl,61,1,nonanginal,150,243,1,normal,137,1,1.0,flat,0,fixed,0
+40cl,65,0,asymptomatic,150,225,0,LVH,114,0,1.0,flat,3,none,4
+41cl,40,1,typical anginal,140,199,0,normal,178,1,1.4,upsloping,0,none,0
+42cl,71,0,atypical anginal,160,302,0,normal,162,0,0.4,upsloping,2,fixed,0
+43cl,59,1,nonanginal,150,212,1,normal,157,0,1.6,upsloping,0,fixed,0
+44cl,61,0,asymptomatic,130,330,0,LVH,169,0,0.0,upsloping,0,fixed,1
+45cl,58,1,nonanginal,112,230,0,LVH,165,0,2.5,flat,1,none,4
+46cl,51,1,nonanginal,110,175,0,normal,123,0,0.6,upsloping,0,fixed,0
+47cl,50,1,asymptomatic,150,243,0,LVH,128,0,2.6,flat,0,none,4
+48cl,65,0,nonanginal,140,417,1,LVH,157,0,0.8,upsloping,1,fixed,0
+49cl,53,1,nonanginal,130,197,1,LVH,152,0,1.2,downsloping,0,fixed,0
+50cl,41,0,atypical anginal,105,198,0,normal,168,0,0.0,upsloping,1,fixed,0
+51cl,65,1,asymptomatic,120,177,0,normal,140,0,0.4,upsloping,0,none,0
+52cl,44,1,asymptomatic,112,290,0,LVH,153,0,0.0,upsloping,1,fixed,2
+53cl,44,1,atypical anginal,130,219,0,LVH,188,0,0.0,upsloping,0,fixed,0
+54cl,60,1,asymptomatic,130,253,0,normal,144,1,1.4,upsloping,1,none,1
+55cl,54,1,asymptomatic,124,266,0,LVH,109,1,2.2,flat,1,none,1
+56cl,50,1,nonanginal,140,233,0,normal,163,0,0.6,flat,1,none,1
+57cl,41,1,asymptomatic,110,172,0,LVH,158,0,0.0,upsloping,0,none,1
+58cl,54,1,nonanginal,125,273,0,LVH,152,0,0.5,downsloping,1,fixed,0
+59cl,51,1,typical anginal,125,213,0,LVH,125,1,1.4,upsloping,1,fixed,0
+60cl,51,0,asymptomatic,130,305,0,normal,142,1,1.2,flat,0,none,2
+61cl,46,0,nonanginal,142,177,0,LVH,160,1,1.4,downsloping,0,fixed,0
+62cl,58,1,asymptomatic,128,216,0,LVH,131,1,2.2,flat,3,none,1
+63cl,54,0,nonanginal,135,304,1,normal,170,0,0.0,upsloping,0,fixed,0
+64cl,54,1,asymptomatic,120,188,0,normal,113,0,1.4,flat,1,none,2
+65cl,60,1,asymptomatic,145,282,0,LVH,142,1,2.8,flat,2,none,2
+66cl,60,1,nonanginal,140,185,0,LVH,155,0,3.0,flat,0,fixed,1
+67cl,54,1,nonanginal,150,232,0,LVH,165,0,1.6,upsloping,0,none,0
+68cl,59,1,asymptomatic,170,326,0,LVH,140,1,3.4,downsloping,0,none,2
+69cl,46,1,nonanginal,150,231,0,normal,147,0,3.6,flat,0,fixed,1
+70cl,65,0,nonanginal,155,269,0,normal,148,0,0.8,upsloping,0,fixed,0
+71cl,67,1,asymptomatic,125,254,1,normal,163,0,0.2,flat,2,none,3
+72cl,62,1,asymptomatic,120,267,0,normal,99,1,1.8,flat,2,none,1
+73cl,65,1,asymptomatic,110,248,0,LVH,158,0,0.6,upsloping,2,reversible,1
+74cl,44,1,asymptomatic,110,197,0,LVH,177,0,0.0,upsloping,1,fixed,1
+75cl,65,0,nonanginal,160,360,0,LVH,151,0,0.8,upsloping,0,fixed,0
+76cl,60,1,asymptomatic,125,258,0,LVH,141,1,2.8,flat,1,none,1
+77cl,51,0,nonanginal,140,308,0,LVH,142,0,1.5,upsloping,1,fixed,0
+78cl,48,1,atypical anginal,130,245,0,LVH,180,0,0.2,flat,0,fixed,0
+79cl,58,1,asymptomatic,150,270,0,LVH,111,1,0.8,upsloping,0,none,3
+80cl,45,1,asymptomatic,104,208,0,LVH,148,1,3.0,flat,0,fixed,0
+81cl,53,0,asymptomatic,130,264,0,LVH,143,0,0.4,flat,0,fixed,0
+82cl,39,1,nonanginal,140,321,0,LVH,182,0,0.0,upsloping,0,fixed,0
+83cl,68,1,nonanginal,180,274,1,LVH,150,1,1.6,flat,0,none,3
+84cl,52,1,atypical anginal,120,325,0,normal,172,0,0.2,upsloping,0,fixed,0
+85cl,44,1,nonanginal,140,235,0,LVH,180,0,0.0,upsloping,0,fixed,0
+86cl,47,1,nonanginal,138,257,0,LVH,156,0,0.0,upsloping,0,fixed,0
+87cl,53,0,nonanginal,128,216,0,LVH,115,0,0.0,upsloping,0,,0
+88cl,53,0,asymptomatic,138,234,0,LVH,160,0,0.0,upsloping,0,fixed,0
+89cl,51,0,nonanginal,130,256,0,LVH,149,0,0.5,upsloping,0,fixed,0
+90cl,66,1,asymptomatic,120,302,0,LVH,151,0,0.4,flat,0,fixed,0
+91cl,62,0,asymptomatic,160,164,0,LVH,145,0,6.2,downsloping,3,none,3
+92cl,62,1,nonanginal,130,231,0,normal,146,0,1.8,flat,3,none,0
+93cl,44,0,nonanginal,108,141,0,normal,175,0,0.6,flat,0,fixed,0
+94cl,63,0,nonanginal,135,252,0,LVH,172,0,0.0,upsloping,0,fixed,0
+95cl,52,1,asymptomatic,128,255,0,normal,161,1,0.0,upsloping,1,none,1
+96cl,59,1,asymptomatic,110,239,0,LVH,142,1,1.2,flat,1,none,2
+97cl,60,0,asymptomatic,150,258,0,LVH,157,0,2.6,flat,2,none,3
+98cl,52,1,atypical anginal,134,201,0,normal,158,0,0.8,upsloping,1,fixed,0
+99cl,48,1,asymptomatic,122,222,0,LVH,186,0,0.0,upsloping,0,fixed,0
+100cl,45,1,asymptomatic,115,260,0,LVH,185,0,0.0,upsloping,0,fixed,0
+101cl,34,1,typical anginal,118,182,0,LVH,174,0,0.0,upsloping,0,fixed,0
+102cl,57,0,asymptomatic,128,303,0,LVH,159,0,0.0,upsloping,1,fixed,0
+103cl,71,0,nonanginal,110,265,1,LVH,130,0,0.0,upsloping,1,fixed,0
+104cl,49,1,nonanginal,120,188,0,normal,139,0,2.0,flat,3,none,3
+105cl,54,1,atypical anginal,108,309,0,normal,156,0,0.0,upsloping,0,none,0
+106cl,59,1,asymptomatic,140,177,0,normal,162,1,0.0,upsloping,1,none,2
+107cl,57,1,nonanginal,128,229,0,LVH,150,0,0.4,flat,1,none,1
+108cl,61,1,asymptomatic,120,260,0,normal,140,1,3.6,flat,1,none,2
+109cl,39,1,asymptomatic,118,219,0,normal,140,0,1.2,flat,0,none,3
+110cl,61,0,asymptomatic,145,307,0,LVH,146,1,1.0,flat,0,none,1
+111cl,56,1,asymptomatic,125,249,1,LVH,144,1,1.2,flat,1,fixed,1
+112cl,52,1,typical anginal,118,186,0,LVH,190,0,0.0,flat,0,reversible,0
+113cl,43,0,asymptomatic,132,341,1,LVH,136,1,3.0,flat,0,none,2
+114cl,62,0,nonanginal,130,263,0,normal,97,0,1.2,flat,1,none,2
+115cl,41,1,atypical anginal,135,203,0,normal,132,0,0.0,flat,0,reversible,0
+116cl,58,1,nonanginal,140,211,1,LVH,165,0,0.0,upsloping,0,fixed,0
+117cl,35,0,asymptomatic,138,183,0,normal,182,0,1.4,upsloping,0,fixed,0
+118cl,63,1,asymptomatic,130,330,1,LVH,132,1,1.8,upsloping,3,none,3
+119cl,65,1,asymptomatic,135,254,0,LVH,127,0,2.8,flat,1,none,2
+120cl,48,1,asymptomatic,130,256,1,LVH,150,1,0.0,upsloping,2,none,3
+121cl,63,0,asymptomatic,150,407,0,LVH,154,0,4.0,flat,3,none,4
+122cl,51,1,nonanginal,100,222,0,normal,143,1,1.2,flat,0,fixed,0
+123cl,55,1,asymptomatic,140,217,0,normal,111,1,5.6,downsloping,0,none,3
+124cl,65,1,typical anginal,138,282,1,LVH,174,0,1.4,flat,1,fixed,1
+125cl,45,0,atypical anginal,130,234,0,LVH,175,0,0.6,flat,0,fixed,0
+126cl,56,0,asymptomatic,200,288,1,LVH,133,1,4.0,downsloping,2,none,3
+127cl,54,1,asymptomatic,110,239,0,normal,126,1,2.8,flat,1,none,3
+128cl,44,1,atypical anginal,120,220,0,normal,170,0,0.0,upsloping,0,fixed,0
+129cl,62,0,asymptomatic,124,209,0,normal,163,0,0.0,upsloping,0,fixed,0
+130cl,54,1,nonanginal,120,258,0,LVH,147,0,0.4,flat,0,none,0
+131cl,51,1,nonanginal,94,227,0,normal,154,1,0.0,upsloping,1,none,0
+132cl,29,1,atypical anginal,130,204,0,LVH,202,0,0.0,upsloping,0,fixed,0
+133cl,51,1,asymptomatic,140,261,0,LVH,186,1,0.0,upsloping,0,fixed,0
+134cl,43,0,nonanginal,122,213,0,normal,165,0,0.2,flat,0,fixed,0
+135cl,55,0,atypical anginal,135,250,0,LVH,161,0,1.4,flat,0,fixed,0
+136cl,70,1,asymptomatic,145,174,0,normal,125,1,2.6,downsloping,0,none,4
+137cl,62,1,atypical anginal,120,281,0,LVH,103,0,1.4,flat,1,none,3
+138cl,35,1,asymptomatic,120,198,0,normal,130,1,1.6,flat,0,none,1
+139cl,51,1,nonanginal,125,245,1,LVH,166,0,2.4,flat,0,fixed,0
+140cl,59,1,atypical anginal,140,221,0,normal,164,1,0.0,upsloping,0,fixed,0
+141cl,59,1,typical anginal,170,288,0,LVH,159,0,0.2,flat,0,none,1
+142cl,52,1,atypical anginal,128,205,1,normal,184,0,0.0,upsloping,0,fixed,0
+143cl,64,1,nonanginal,125,309,0,normal,131,1,1.8,flat,0,none,1
+144cl,58,1,nonanginal,105,240,0,LVH,154,1,0.6,flat,0,none,0
+145cl,47,1,nonanginal,108,243,0,normal,152,0,0.0,upsloping,0,fixed,1
+146cl,57,1,asymptomatic,165,289,1,LVH,124,0,1.0,flat,3,none,4
+147cl,41,1,nonanginal,112,250,0,normal,179,0,0.0,upsloping,0,fixed,0
+148cl,45,1,atypical anginal,128,308,0,LVH,170,0,0.0,upsloping,0,fixed,0
+149cl,60,0,nonanginal,102,318,0,normal,160,0,0.0,upsloping,1,fixed,0
+150cl,52,1,typical anginal,152,298,1,normal,178,0,1.2,flat,0,none,0
+151cl,42,0,asymptomatic,102,265,0,LVH,122,0,0.6,flat,0,fixed,0
+152cl,67,0,nonanginal,115,564,0,LVH,160,0,1.6,flat,0,none,0
+153cl,55,1,asymptomatic,160,289,0,LVH,145,1,0.8,flat,1,none,4
+154cl,64,1,asymptomatic,120,246,0,LVH,96,1,2.2,downsloping,1,fixed,3
+155cl,70,1,asymptomatic,130,322,0,LVH,109,0,2.4,flat,3,fixed,1
+156cl,51,1,asymptomatic,140,299,0,normal,173,1,1.6,upsloping,0,none,1
+157cl,58,1,asymptomatic,125,300,0,LVH,171,0,0.0,upsloping,2,none,1
+158cl,60,1,asymptomatic,140,293,0,LVH,170,0,1.2,flat,2,none,2
+159cl,68,1,nonanginal,118,277,0,normal,151,0,1.0,upsloping,1,none,0
+160cl,46,1,atypical anginal,101,197,1,normal,156,0,0.0,upsloping,0,none,0
+161cl,77,1,asymptomatic,125,304,0,LVH,162,1,0.0,upsloping,3,fixed,4
+162cl,54,0,nonanginal,110,214,0,normal,158,0,1.6,flat,0,fixed,0
+163cl,58,0,asymptomatic,100,248,0,LVH,122,0,1.0,flat,0,fixed,0
+164cl,48,1,nonanginal,124,255,1,normal,175,0,0.0,upsloping,2,fixed,0
+165cl,57,1,asymptomatic,132,207,0,normal,168,1,0.0,upsloping,0,none,0
+166cl,52,1,nonanginal,138,223,0,normal,169,0,0.0,upsloping,,fixed,0
+167cl,54,0,atypical anginal,132,288,1,LVH,159,1,0.0,upsloping,1,fixed,0
+168cl,35,1,asymptomatic,126,282,0,LVH,156,1,0.0,upsloping,0,none,1
+169cl,45,0,atypical anginal,112,160,0,normal,138,0,0.0,flat,0,fixed,0
+170cl,70,1,nonanginal,160,269,0,normal,112,1,2.9,flat,1,none,3
+171cl,53,1,asymptomatic,142,226,0,LVH,111,1,0.0,upsloping,0,none,0
+172cl,59,0,asymptomatic,174,249,0,normal,143,1,0.0,flat,0,fixed,1
+173cl,62,0,asymptomatic,140,394,0,LVH,157,0,1.2,flat,0,fixed,0
+174cl,64,1,asymptomatic,145,212,0,LVH,132,0,2.0,flat,2,reversible,4
+175cl,57,1,asymptomatic,152,274,0,normal,88,1,1.2,flat,1,none,1
+176cl,52,1,asymptomatic,108,233,1,normal,147,0,0.1,upsloping,3,none,0
+177cl,56,1,asymptomatic,132,184,0,LVH,105,1,2.1,flat,1,reversible,1
+178cl,43,1,nonanginal,130,315,0,normal,162,0,1.9,upsloping,1,fixed,0
+179cl,53,1,nonanginal,130,246,1,LVH,173,0,0.0,upsloping,3,fixed,0
+180cl,48,1,asymptomatic,124,274,0,LVH,166,0,0.5,flat,0,none,3
+181cl,56,0,asymptomatic,134,409,0,LVH,150,1,1.9,flat,2,none,2
+182cl,42,1,typical anginal,148,244,0,LVH,178,0,0.8,upsloping,2,fixed,0
+183cl,59,1,typical anginal,178,270,0,LVH,145,0,4.2,downsloping,0,none,0
+184cl,60,0,asymptomatic,158,305,0,LVH,161,0,0.0,upsloping,0,fixed,1
+185cl,63,0,atypical anginal,140,195,0,normal,179,0,0.0,upsloping,2,fixed,0
+186cl,42,1,nonanginal,120,240,1,normal,194,0,0.8,downsloping,0,none,0
+187cl,66,1,atypical anginal,160,246,0,normal,120,1,0.0,flat,3,reversible,2
+188cl,54,1,atypical anginal,192,283,0,LVH,195,0,0.0,upsloping,1,none,1
+189cl,69,1,nonanginal,140,254,0,LVH,146,0,2.0,flat,3,none,2
+190cl,50,1,nonanginal,129,196,0,normal,163,0,0.0,upsloping,0,fixed,0
+191cl,51,1,asymptomatic,140,298,0,normal,122,1,4.2,flat,3,none,3
+192cl,43,1,asymptomatic,132,247,1,LVH,143,1,0.1,flat,,none,1
+193cl,62,0,asymptomatic,138,294,1,normal,106,0,1.9,flat,3,fixed,2
+194cl,68,0,nonanginal,120,211,0,LVH,115,0,1.5,flat,0,fixed,0
+195cl,67,1,asymptomatic,100,299,0,LVH,125,1,0.9,flat,2,fixed,3
+196cl,69,1,typical anginal,160,234,1,LVH,131,0,0.1,flat,1,fixed,0
+197cl,45,0,asymptomatic,138,236,0,LVH,152,1,0.2,flat,0,fixed,0
+198cl,50,0,atypical anginal,120,244,0,normal,162,0,1.1,upsloping,0,fixed,0
+199cl,59,1,typical anginal,160,273,0,LVH,125,0,0.0,upsloping,0,fixed,1
+200cl,50,0,asymptomatic,110,254,0,LVH,159,0,0.0,upsloping,0,fixed,0
+201cl,64,0,asymptomatic,180,325,0,normal,154,1,0.0,upsloping,0,fixed,0
+202cl,57,1,nonanginal,150,126,1,normal,173,0,0.2,upsloping,1,none,0
+203cl,64,0,nonanginal,140,313,0,normal,133,0,0.2,upsloping,0,none,0
+204cl,43,1,asymptomatic,110,211,0,normal,161,0,0.0,upsloping,0,none,0
+205cl,45,1,asymptomatic,142,309,0,LVH,147,1,0.0,flat,3,none,3
+206cl,58,1,asymptomatic,128,259,0,LVH,130,1,3.0,flat,2,none,3
+207cl,50,1,asymptomatic,144,200,0,LVH,126,1,0.9,flat,0,none,3
+208cl,55,1,atypical anginal,130,262,0,normal,155,0,0.0,upsloping,0,fixed,0
+209cl,62,0,asymptomatic,150,244,0,normal,154,1,1.4,flat,0,fixed,1
+210cl,37,0,nonanginal,120,215,0,normal,170,0,0.0,upsloping,0,fixed,0
+211cl,38,1,typical anginal,120,231,0,normal,182,1,3.8,flat,0,none,4
+212cl,41,1,nonanginal,130,214,0,LVH,168,0,2.0,flat,0,fixed,0
+213cl,66,0,asymptomatic,178,228,1,normal,165,1,1.0,flat,2,none,3
+214cl,52,1,asymptomatic,112,230,0,normal,160,0,0.0,upsloping,1,fixed,1
+215cl,56,1,typical anginal,120,193,0,LVH,162,0,1.9,flat,0,none,0
+216cl,46,0,atypical anginal,105,204,0,normal,172,0,0.0,upsloping,0,fixed,0
+217cl,46,0,asymptomatic,138,243,0,LVH,152,1,0.0,flat,0,fixed,0
+218cl,64,0,asymptomatic,130,303,0,normal,122,0,2.0,flat,2,fixed,0
+219cl,59,1,asymptomatic,138,271,0,LVH,182,0,0.0,upsloping,0,fixed,0
+220cl,41,0,nonanginal,112,268,0,LVH,172,1,0.0,upsloping,0,fixed,0
+221cl,54,0,nonanginal,108,267,0,LVH,167,0,0.0,upsloping,0,fixed,0
+222cl,39,0,nonanginal,94,199,0,normal,179,0,0.0,upsloping,0,fixed,0
+223cl,53,1,asymptomatic,123,282,0,normal,95,1,2.0,flat,2,none,3
+224cl,63,0,asymptomatic,108,269,0,normal,169,1,1.8,flat,2,fixed,1
+225cl,34,0,atypical anginal,118,210,0,normal,192,0,0.7,upsloping,0,fixed,0
+226cl,47,1,asymptomatic,112,204,0,normal,143,0,0.1,upsloping,0,fixed,0
+227cl,67,0,nonanginal,152,277,0,normal,172,0,0.0,upsloping,1,fixed,0
+228cl,54,1,asymptomatic,110,206,0,LVH,108,1,0.0,flat,1,fixed,3
+229cl,66,1,asymptomatic,112,212,0,LVH,132,1,0.1,upsloping,1,fixed,2
+230cl,52,0,nonanginal,136,196,0,LVH,169,0,0.1,flat,0,fixed,0
+231cl,55,0,asymptomatic,180,327,0,ST-T abnormality,117,1,3.4,flat,0,fixed,2
+232cl,49,1,nonanginal,118,149,0,LVH,126,0,0.8,upsloping,3,fixed,1
+233cl,74,0,atypical anginal,120,269,0,LVH,121,1,0.2,upsloping,1,fixed,0
+234cl,54,0,nonanginal,160,201,0,normal,163,0,0.0,upsloping,1,fixed,0
+235cl,54,1,asymptomatic,122,286,0,LVH,116,1,3.2,flat,2,fixed,3
+236cl,56,1,asymptomatic,130,283,1,LVH,103,1,1.6,downsloping,0,none,2
+237cl,46,1,asymptomatic,120,249,0,LVH,144,0,0.8,upsloping,0,none,1
+238cl,49,0,atypical anginal,134,271,0,normal,162,0,0.0,flat,0,fixed,0
+239cl,42,1,atypical anginal,120,295,0,normal,162,0,0.0,upsloping,0,fixed,0
+240cl,41,1,atypical anginal,110,235,0,normal,153,0,0.0,upsloping,0,fixed,0
+241cl,41,0,atypical anginal,126,306,0,normal,163,0,0.0,upsloping,0,fixed,0
+242cl,49,0,asymptomatic,130,269,0,normal,163,0,0.0,upsloping,0,fixed,0
+243cl,61,1,typical anginal,134,234,0,normal,145,0,2.6,flat,2,fixed,2
+244cl,60,0,nonanginal,120,178,1,normal,96,0,0.0,upsloping,0,fixed,0
+245cl,67,1,asymptomatic,120,237,0,normal,71,0,1.0,flat,0,fixed,2
+246cl,58,1,asymptomatic,100,234,0,normal,156,0,0.1,upsloping,1,none,2
+247cl,47,1,asymptomatic,110,275,0,LVH,118,1,1.0,flat,1,fixed,1
+248cl,52,1,asymptomatic,125,212,0,normal,168,0,1.0,upsloping,2,none,3
+249cl,62,1,atypical anginal,128,208,1,LVH,140,0,0.0,upsloping,0,fixed,0
+250cl,57,1,asymptomatic,110,201,0,normal,126,1,1.5,flat,0,reversible,0
+251cl,58,1,asymptomatic,146,218,0,normal,105,0,2.0,flat,1,none,1
+252cl,64,1,asymptomatic,128,263,0,normal,105,1,0.2,flat,1,none,0
+253cl,51,0,nonanginal,120,295,0,LVH,157,0,0.6,upsloping,0,fixed,0
+254cl,43,1,asymptomatic,115,303,0,normal,181,0,1.2,flat,0,fixed,0
+255cl,42,0,nonanginal,120,209,0,normal,173,0,0.0,flat,0,fixed,0
+256cl,67,0,asymptomatic,106,223,0,normal,142,0,0.3,upsloping,2,fixed,0
+257cl,76,0,nonanginal,140,197,0,ST-T abnormality,116,0,1.1,flat,0,fixed,0
+258cl,70,1,atypical anginal,156,245,0,LVH,143,0,0.0,upsloping,0,fixed,0
+259cl,57,1,atypical anginal,124,261,0,normal,141,0,0.3,upsloping,0,none,1
+260cl,44,0,nonanginal,118,242,0,normal,149,0,0.3,flat,1,fixed,0
+261cl,58,0,atypical anginal,136,319,1,LVH,152,0,0.0,upsloping,2,fixed,3
+262cl,60,0,typical anginal,150,240,0,normal,171,0,0.9,upsloping,0,fixed,0
+263cl,44,1,nonanginal,120,226,0,normal,169,0,0.0,upsloping,0,fixed,0
+264cl,61,1,asymptomatic,138,166,0,LVH,125,1,3.6,flat,1,fixed,4
+265cl,42,1,asymptomatic,136,315,0,normal,125,1,1.8,flat,0,reversible,2
+266cl,52,1,asymptomatic,128,204,1,normal,156,1,1.0,flat,0,,2
+267cl,59,1,nonanginal,126,218,1,normal,134,0,2.2,flat,1,reversible,2
+268cl,40,1,asymptomatic,152,223,0,normal,181,0,0.0,upsloping,0,none,1
+269cl,42,1,nonanginal,130,180,0,normal,150,0,0.0,upsloping,0,fixed,0
+270cl,61,1,asymptomatic,140,207,0,LVH,138,1,1.9,upsloping,1,none,1
+271cl,66,1,asymptomatic,160,228,0,LVH,138,0,2.3,upsloping,0,reversible,0
+272cl,46,1,asymptomatic,140,311,0,normal,120,1,1.8,flat,2,none,2
+273cl,71,0,asymptomatic,112,149,0,normal,125,0,1.6,flat,0,fixed,0
+274cl,59,1,typical anginal,134,204,0,normal,162,0,0.8,upsloping,2,fixed,1
+275cl,64,1,typical anginal,170,227,0,LVH,155,0,0.6,flat,0,none,0
+276cl,66,0,nonanginal,146,278,0,LVH,152,0,0.0,flat,1,fixed,0
+277cl,39,0,nonanginal,138,220,0,normal,152,0,0.0,flat,0,fixed,0
+278cl,57,1,atypical anginal,154,232,0,LVH,164,0,0.0,upsloping,1,fixed,1
+279cl,58,0,asymptomatic,130,197,0,normal,131,0,0.6,flat,0,fixed,0
+280cl,57,1,asymptomatic,110,335,0,normal,143,1,3.0,flat,1,none,2
+281cl,47,1,nonanginal,130,253,0,normal,179,0,0.0,upsloping,0,fixed,0
+282cl,55,0,asymptomatic,128,205,0,ST-T abnormality,130,1,2.0,flat,1,none,3
+283cl,35,1,atypical anginal,122,192,0,normal,174,0,0.0,upsloping,0,fixed,0
+284cl,61,1,asymptomatic,148,203,0,normal,161,0,0.0,upsloping,1,none,2
+285cl,58,1,asymptomatic,114,318,0,ST-T abnormality,140,0,4.4,downsloping,3,reversible,4
+286cl,58,0,asymptomatic,170,225,1,LVH,146,1,2.8,flat,2,reversible,2
+287cl,58,1,atypical anginal,125,220,0,normal,144,0,0.4,flat,,none,0
+288cl,56,1,atypical anginal,130,221,0,LVH,163,0,0.0,upsloping,0,none,0
+289cl,56,1,atypical anginal,120,240,0,normal,169,0,0.0,downsloping,0,fixed,0
+290cl,67,1,nonanginal,152,212,0,LVH,150,0,0.8,flat,0,none,1
+291cl,55,0,atypical anginal,132,342,0,normal,166,0,1.2,upsloping,0,fixed,0
+292cl,44,1,asymptomatic,120,169,0,normal,144,1,2.8,downsloping,0,reversible,2
+293cl,63,1,asymptomatic,140,187,0,LVH,144,1,4.0,upsloping,2,none,2
+294cl,63,0,asymptomatic,124,197,0,normal,136,1,0.0,flat,0,fixed,1
+295cl,41,1,atypical anginal,120,157,0,normal,182,0,0.0,upsloping,0,fixed,0
+296cl,59,1,asymptomatic,164,176,1,LVH,90,0,1.0,flat,2,reversible,3
+297cl,57,0,asymptomatic,140,241,0,normal,123,1,0.2,flat,0,none,1
+298cl,45,1,typical anginal,110,264,0,normal,132,0,1.2,flat,0,none,1
+299cl,68,1,asymptomatic,144,193,1,normal,141,0,3.4,flat,2,none,2
+300cl,57,1,asymptomatic,130,131,0,normal,115,1,1.2,flat,1,none,3
+301cl,57,0,atypical anginal,130,236,0,LVH,174,0,0.0,flat,1,fixed,1
+302cl,38,1,nonanginal,138,175,0,normal,173,0,0.0,upsloping,,fixed,0
+0sw,32,1,typical anginal,95,0,,normal,127,0,0.7,upsloping,,,1
+1sw,34,1,asymptomatic,115,0,,,154,0,0.2,upsloping,,,1
+2sw,35,1,asymptomatic,,0,,normal,130,1,,,,none,3
+3sw,36,1,asymptomatic,110,0,,normal,125,1,1.0,flat,,reversible,1
+4sw,38,0,asymptomatic,105,0,,normal,166,0,2.8,upsloping,,,2
+5sw,38,0,asymptomatic,110,0,0,normal,156,0,0.0,flat,,fixed,1
+6sw,38,1,nonanginal,100,0,,normal,179,0,-1.1,upsloping,,,0
+7sw,38,1,nonanginal,115,0,0,normal,128,1,0.0,flat,,none,1
+8sw,38,1,asymptomatic,135,0,,normal,150,0,0.0,,,fixed,2
+9sw,38,1,asymptomatic,150,0,,normal,120,1,,,,fixed,1
+10sw,40,1,asymptomatic,95,0,,ST-T abnormality,144,0,0.0,upsloping,,,2
+11sw,41,1,asymptomatic,125,0,,normal,176,0,1.6,upsloping,,,2
+12sw,42,1,asymptomatic,105,0,,normal,128,1,-1.5,downsloping,,,1
+13sw,42,1,asymptomatic,145,0,0,normal,99,1,0.0,flat,,,2
+14sw,43,1,asymptomatic,100,0,,normal,122,0,1.5,downsloping,,,3
+15sw,43,1,asymptomatic,115,0,0,normal,145,1,2.0,flat,,none,4
+16sw,43,1,asymptomatic,140,0,0,ST-T abnormality,140,1,0.5,upsloping,,none,2
+17sw,45,1,nonanginal,110,0,,normal,138,0,-0.1,upsloping,,,0
+18sw,46,1,asymptomatic,100,0,,ST-T abnormality,133,0,-2.6,flat,,,1
+19sw,46,1,asymptomatic,115,0,0,normal,113,1,1.5,flat,,none,1
+20sw,47,1,nonanginal,110,0,,normal,120,1,0.0,,,fixed,1
+21sw,47,1,nonanginal,155,0,0,normal,118,1,1.0,flat,,fixed,3
+22sw,47,1,asymptomatic,110,0,,ST-T abnormality,149,0,2.1,upsloping,,,2
+23sw,47,1,asymptomatic,160,0,0,normal,124,1,0.0,flat,,none,1
+24sw,48,1,asymptomatic,115,0,,normal,128,0,0.0,flat,,reversible,2
+25sw,50,0,asymptomatic,160,0,,normal,110,0,0.0,,,fixed,1
+26sw,50,1,asymptomatic,115,0,0,normal,120,1,0.5,flat,,reversible,3
+27sw,50,1,asymptomatic,120,0,0,ST-T abnormality,156,1,0.0,upsloping,,reversible,3
+28sw,50,1,asymptomatic,145,0,,normal,139,1,0.7,flat,,,1
+29sw,51,0,asymptomatic,120,0,,normal,127,1,1.5,upsloping,,,2
+30sw,51,1,asymptomatic,110,0,,normal,92,0,0.0,flat,,,4
+31sw,51,1,asymptomatic,120,0,1,normal,104,0,0.0,flat,,fixed,3
+32sw,51,1,asymptomatic,130,0,,normal,170,0,-0.7,upsloping,,,2
+33sw,51,1,asymptomatic,130,0,,ST-T abnormality,163,0,0.0,,,none,1
+34sw,51,1,asymptomatic,140,0,0,normal,60,0,0.0,flat,,fixed,2
+35sw,51,1,asymptomatic,95,0,,normal,126,0,2.2,flat,,,2
+36sw,52,1,asymptomatic,130,0,,normal,120,0,0.0,flat,,none,2
+37sw,52,1,asymptomatic,135,0,,normal,128,1,2.0,flat,,none,2
+38sw,52,1,asymptomatic,165,0,,normal,122,1,1.0,upsloping,,none,2
+39sw,52,1,asymptomatic,95,0,,normal,82,1,,,,,2
+40sw,53,1,atypical anginal,120,0,0,normal,95,0,0.0,flat,,fixed,3
+41sw,53,1,atypical anginal,130,0,,ST-T abnormality,120,0,0.7,downsloping,,,0
+42sw,53,1,nonanginal,105,0,0,normal,115,0,0.0,flat,,none,1
+43sw,53,1,nonanginal,160,0,,LVH,122,1,0.0,,,none,1
+44sw,53,1,asymptomatic,120,0,,normal,120,0,0.0,flat,,none,1
+45sw,53,1,asymptomatic,125,0,,normal,120,0,1.5,upsloping,,,4
+46sw,53,1,asymptomatic,130,0,0,LVH,135,1,1.0,flat,,none,2
+47sw,53,1,asymptomatic,80,0,,normal,141,1,2.0,downsloping,,,0
+48sw,54,1,asymptomatic,120,0,0,normal,155,0,0.0,flat,,none,2
+49sw,54,1,asymptomatic,130,0,,normal,110,1,3.0,flat,,none,3
+50sw,54,1,asymptomatic,180,0,,normal,150,0,1.5,flat,,none,1
+51sw,55,1,atypical anginal,140,0,,ST-T abnormality,150,0,0.2,upsloping,,,0
+52sw,55,1,asymptomatic,115,0,,normal,155,0,0.1,flat,,,1
+53sw,55,1,asymptomatic,120,0,0,ST-T abnormality,92,0,0.3,upsloping,,none,4
+54sw,55,1,asymptomatic,140,0,0,normal,83,0,0.0,flat,,none,2
+55sw,56,1,nonanginal,120,0,0,normal,97,0,0.0,flat,,none,0
+56sw,56,1,nonanginal,125,0,,normal,98,0,-2.0,flat,,none,2
+57sw,56,1,nonanginal,155,0,0,ST-T abnormality,99,0,0.0,flat,,fixed,2
+58sw,56,1,asymptomatic,115,0,,ST-T abnormality,82,0,-1.0,upsloping,,,1
+59sw,56,1,asymptomatic,120,0,0,ST-T abnormality,100,1,-1.0,downsloping,,none,2
+60sw,56,1,asymptomatic,120,0,0,ST-T abnormality,148,0,0.0,flat,,,2
+61sw,56,1,asymptomatic,125,0,1,normal,103,1,1.0,flat,,none,3
+62sw,56,1,asymptomatic,140,0,,normal,121,1,1.8,upsloping,,,1
+63sw,57,1,nonanginal,105,0,,normal,148,0,0.3,flat,,,1
+64sw,57,1,asymptomatic,110,0,,ST-T abnormality,131,1,1.4,upsloping,1,,3
+65sw,57,1,asymptomatic,140,0,0,normal,120,1,2.0,flat,,reversible,2
+66sw,57,1,asymptomatic,140,0,,normal,100,1,0.0,,,reversible,3
+67sw,57,1,asymptomatic,160,0,,normal,98,1,2.0,flat,,none,2
+68sw,57,1,asymptomatic,95,0,,normal,182,0,0.7,downsloping,,,1
+69sw,58,1,asymptomatic,115,0,,normal,138,0,0.5,upsloping,,,1
+70sw,58,1,asymptomatic,130,0,0,ST-T abnormality,100,1,1.0,flat,,reversible,4
+71sw,58,1,asymptomatic,170,0,,ST-T abnormality,105,1,0.0,,,fixed,1
+72sw,59,1,nonanginal,125,0,,normal,175,0,2.6,flat,,,1
+73sw,59,1,asymptomatic,110,0,,normal,94,0,0.0,,,reversible,3
+74sw,59,1,asymptomatic,120,0,0,normal,115,0,0.0,flat,,fixed,2
+75sw,59,1,asymptomatic,125,0,,normal,119,1,0.9,upsloping,,,1
+76sw,59,1,asymptomatic,135,0,0,normal,115,1,1.0,flat,,none,1
+77sw,60,1,nonanginal,115,0,,normal,143,0,2.4,upsloping,,,1
+78sw,60,1,asymptomatic,125,0,,normal,110,0,0.1,upsloping,2,,3
+79sw,60,1,asymptomatic,130,0,,ST-T abnormality,130,1,1.1,downsloping,1,,1
+80sw,60,1,asymptomatic,135,0,0,normal,63,1,0.5,upsloping,,none,3
+81sw,60,1,asymptomatic,160,0,0,ST-T abnormality,99,1,0.5,flat,,none,3
+82sw,60,1,asymptomatic,160,0,,normal,149,0,0.4,flat,,,1
+83sw,61,1,nonanginal,200,0,,ST-T abnormality,70,0,0.0,,,fixed,3
+84sw,61,1,asymptomatic,105,0,,normal,110,1,1.5,upsloping,,,1
+85sw,61,1,asymptomatic,110,0,,normal,113,0,1.4,flat,,,1
+86sw,61,1,asymptomatic,125,0,0,normal,105,1,0.0,downsloping,,none,3
+87sw,61,1,asymptomatic,130,0,0,LVH,115,0,0.0,flat,,none,3
+88sw,61,1,asymptomatic,130,0,,normal,77,0,2.5,flat,,,3
+89sw,61,1,asymptomatic,150,0,0,normal,105,1,0.0,flat,,none,1
+90sw,61,1,asymptomatic,150,0,0,normal,117,1,2.0,flat,,none,2
+91sw,61,1,asymptomatic,160,0,1,ST-T abnormality,145,0,1.0,flat,,none,2
+92sw,62,0,typical anginal,140,0,,normal,143,0,0.0,,,fixed,2
+93sw,62,0,asymptomatic,120,0,,ST-T abnormality,123,1,1.7,downsloping,,,1
+94sw,62,1,typical anginal,120,0,,LVH,134,0,-0.8,flat,2,,1
+95sw,62,1,nonanginal,160,0,0,normal,72,1,0.0,flat,,fixed,3
+96sw,62,1,asymptomatic,115,0,,normal,128,1,2.5,downsloping,,,2
+97sw,62,1,asymptomatic,115,0,,normal,72,1,-0.5,flat,,fixed,1
+98sw,62,1,asymptomatic,150,0,,ST-T abnormality,78,0,2.0,flat,,none,3
+99sw,63,1,asymptomatic,100,0,,normal,109,0,-0.9,flat,,,1
+100sw,63,1,asymptomatic,140,0,,LVH,149,0,2.0,upsloping,,,2
+101sw,63,1,asymptomatic,150,0,0,normal,86,1,2.0,flat,,,3
+102sw,63,1,asymptomatic,150,0,,ST-T abnormality,154,0,3.7,upsloping,,,3
+103sw,63,1,asymptomatic,185,0,0,normal,98,1,0.0,upsloping,,none,1
+104sw,64,0,asymptomatic,200,0,0,normal,140,1,1.0,flat,,fixed,3
+105sw,64,0,asymptomatic,95,0,,normal,145,0,1.1,downsloping,,,1
+106sw,64,1,asymptomatic,110,0,,normal,114,1,1.3,downsloping,,,1
+107sw,65,1,asymptomatic,115,0,0,normal,93,1,0.0,flat,,none,1
+108sw,65,1,asymptomatic,145,0,,ST-T abnormality,67,0,,,,reversible,3
+109sw,65,1,asymptomatic,155,0,,normal,154,0,1.0,upsloping,,,0
+110sw,65,1,asymptomatic,160,0,1,ST-T abnormality,122,0,,,,none,3
+111sw,66,0,asymptomatic,155,0,,normal,90,0,0.0,,,none,1
+112sw,66,1,asymptomatic,150,0,0,normal,108,1,2.0,flat,,none,3
+113sw,67,1,typical anginal,145,0,0,LVH,125,0,0.0,flat,,fixed,2
+114sw,68,1,asymptomatic,135,0,0,ST-T abnormality,120,1,0.0,upsloping,,none,3
+115sw,68,1,asymptomatic,145,0,,normal,136,0,1.8,upsloping,,,1
+116sw,69,1,asymptomatic,135,0,0,normal,130,0,0.0,flat,,reversible,1
+117sw,69,1,asymptomatic,,0,0,ST-T abnormality,,,,,,none,3
+118sw,70,1,asymptomatic,115,0,0,ST-T abnormality,92,1,0.0,flat,,none,1
+119sw,70,1,asymptomatic,140,0,1,normal,157,1,2.0,flat,,none,3
+120sw,72,1,nonanginal,160,0,,LVH,114,0,1.6,flat,2,,0
+121sw,73,0,nonanginal,160,0,0,ST-T abnormality,121,0,0.0,upsloping,,fixed,1
+122sw,74,1,atypical anginal,145,0,,ST-T abnormality,123,0,1.3,upsloping,,,1

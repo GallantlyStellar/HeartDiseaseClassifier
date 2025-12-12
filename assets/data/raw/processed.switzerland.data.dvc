@@ -1,0 +1,6 @@
+outs:
+- md5: 9a87f7577310b3917730d06ba9349e20
+  size: 4109
+  isexec: true
+  hash: md5
+  path: processed.switzerland.data

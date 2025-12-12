@@ -1,0 +1,695 @@
+\documentclass[twocolumn]{article}
+\usepackage{caption, graphicx, hyperref, indentfirst, lmodern}
+\renewcommand{\familydefault}{\sfdefault} % sans for readability
+\usepackage[T1]{fontenc}
+\usepackage[margin=1in]{geometry}
+\usepackage[style=apa]{biblatex}
+\usepackage{minted}
+
+\addbibresource{ref.bib}
+\captionsetup{labelfont=bf, textfont=it, labelsep=newline, justification=justified, singlelinecheck=false}
+\hypersetup{colorlinks=true, linkcolor=blue, filecolor=magenta, urlcolor=cyan, citecolor=black}
+
+\author{GallantlyStellar}
+\title{Analysis of Heart Disease Stages with One-Versus-Rest Logistic Regression}
+
+\begin{document}
+\maketitle
+
+\begin{abstract}
+  A public dataset is available from the University of California, Irvine that contains several features and the heart disease stage of 918 patients from four distinct global regions \parencite{uci_dataset, uci_paper}. This dataset was used to fit one-versus-rest (OVR) logistic regression models to predict heart disease stage probabilities. These models were optimized by dropping statistically-insignificant features to determine which clinical features had significant impacts on identification of a given heart disease stage. Significant features are shown by stage in Figure \ref{featuresOverview}. The OVR models were combined with a SoftMax function to create a model that can predict heart disease stage with an accuracy of 58.7\%.
+
+  \begin{figure}[!h]
+    \caption{Presence matrix showing the explanatory variables incorporated by each model stage.}
+    \label{featuresOverview}
+    \begin{center}
+      \includegraphics[width=0.56\columnwidth]{./figures/presenceMatrix.png}
+    \end{center}
+    \textit{Note.} Green annotated spaces represent included features while red spaces represent dropped features. Annotations show exponentiated coefficients ($e^{\beta}$), or the odds ratios. A one-unit increase in an explanatory variable is associated with a fold-change to the odds equal to the annotation (for a given stage) \parencite{logReg}.
+  \end{figure}
+
+\end{abstract}
+
+\newpage
+\section{Introduction}
+\subsection{Justification}
+Heart disease is responsible for approximately one in five deaths in the United States \parencite{cdc}. Thus, data-driven predictions regarding heart disease and its contributing factors have the potential to improve quality of life and lessen healthcare expenses for individuals by predicting heart disease for undiagnosed patients based on clinical findings. This would allow healthcare providers to identify targets for definitive screening (thus facilitating early recognition) and provide recommendations based on existing data within a patient's medical record.
+
+\subsection{Research Question}
+\label{features}
+A research question was formulated based on this problem. ``To what extent do heart disease-related variables correlate with heart disease stages?'' A public dataset was found containing data on age, sex, chest pain type, resting systolic blood pressure, total cholesterol, fasting blood sugar, resting ECG findings, maximum heart rate during exercise, presence of exercise-induced angina, ST depression during exercise, ST segment slope, coronary artery fluoroscopy results, and thallium scintography results; these features will be used as the ``heart disease-related variables.''
+
+\subsection{Context}
+In the United States, 22\% of deaths are due to heart disease \parencite{cdc}. Many risk factors are known to contribute to the incidence of heart disease and 47\% of Americans present with one or more risk factors \parencite{cdc}. An algorithmic way to screen patients for heart disease based on their clinical presentation has been the subject of prior reasearch \parencite{uci_paper, rotForest}.
+
+The University of California, Irvine (UCI) maintains several public datasets for machine learning tasks \parencite{uci_dataset}. The UCI Heart Disease Dataset contains data for four regions around the globe that, when concatenated, include 920 rows with 13 variables to use for prediction and one variable to predict (the stage of heart disease) \parencite{uci_dataset}. This dataset is licensed under CC-BY-4.0 and is thus free of confidential or proprietary information; additionally, it contains only deindentified information. This data is used in prior research \parencite{uci_paper, rotForest}.
+
+The paper that introduced this dataset used  clinical features (age, gender, chest pain type, and systolic blood pressure), routine test results (serum cholesterol, fasting blood glucose level, and electrocardiogram features), and noninvasive cardiology tests (exercise electrocardiogram features, exercise thallium scintigraphy, and coronary artery fluoroscopy) to create a logistic regression model to predict heart disease in patients from various cities \parencite{uci_paper}. The original algorithm was trained only on patients from Cleveland and tested on patients from other regions; additionally, this algorithm was found to generally over-predict the probability of heart disease (in the Long Beach and Hungarian cohorts) in patients but to under-predict in the Swiss cohort \parencite{uci_paper}.
+
+This study will use one-versus-rest multiclass logistic regression (OVR) on a combined cohort to make similar predictions and create a model of a more global nature in the hopes of creating a model than generalizes more effectively. Features that have a statistically significant impact on the target variable will be incorporated into a final model that will be evaluated on unseen data. By selecting these coefficients using a statistical test, only significantly correlated features will be retained.
+
+\subsection{Hypothesis}
+The research hypothesis for this project will be that all of the clinical features (listed in \ref{features}) have a significant impact on the prediction of heart disease.
+
+The null hypothesis can be expressed mathematically as:
+$$H_0: \beta_i = 0$$
+Where $\beta_i$ is the coefficient fit by the logistic regression model for feature $i$.
+
+As coefficients can be positive or negative, the alternate hypothesis can be expressed as a bidirectional inequality.
+$$H_a: \beta_i \neq 0$$
+
+The significance level for this project will be $\alpha = 0.05$. The null hypothesis will be rejected if a two-sided z-test provides a p-value that is less than or equal to this value for any parameter.
+
+\section{Data Collection}
+\subsection{Collection Process}
+The dataset can be downloaded \href{https://archive.ics.uci.edu/dataset/45/heart+disease}{from UCI}. There are four datasets within the archive that are of interest; one dataset for each locality's cohort of patients. Data is available from the V.A. Medical Center in Long Beach, California, the Hungarian Institute of Cardiology in Budapest, Hungary, the Cleveland Clinic Foundation in Cleveland, Ohio, and from the University Hospital in Zurich, Switzerland \parencite{uci_dataset}.
+
+To ensure integrity, the data were controlled with DVC to ensure that dataset hashes do not change. Changes to the underlying dataset were only be performed in memory to not alter or bias the source data.
+
+\subsection{Advantages and Disadvantages}
+Use of a public dataset allowed this project to proceed at a much faster rate; establishing community relationships and obtaining IRB approval to utilize patient data would add significant time and administrative burden to this project.
+
+However, the UCI dataset was compiled in 1989 \parencite{uci_dataset}. It is possible that there are features that can be measured modernly that are of great potential predictive value, as well, and the economics of certain tests could have changed. It would be reasonable to consult a subject matter expert about the relevance of these findings to modern healthcare before implementation in a health system.
+
+\subsection{Collection Challenges}
+The UCI dataset is has many features. The Cleveland cohort contains 76 distinct features \parencite{uci_dataset}. However, as stated above, this project aims to perform an analysis with a global character. Only the features reported by all four localities were used in this analysis to prevent the need for mass imputation of many features only available for the Cleveland cohort.
+
+\break
+\section{Data Extraction and Preparation}
+This analysis was performed using the Python language \parencite{python}.
+\subsection{Data Preparation Process}
+Processes to import, clean, and prepare the data for the analysis were performed using the Pandas library \parencite{pandas}.
+\subsubsection{Importing Data}
+The datasets for each locality were first imported and combined.
+
+\begin{minted}[breaklines, linenos, numbersep=2pt]{python}
+path = "../assets/data/raw"
+dfva = pd.read_csv(path + "/processed.va.data", na_values="?", header=None)
+dfva.index = dfva.index.astype(str) + "va"
+dfhu = pd.read_csv(path + "/processed.hungarian.data", na_values="?", header=None)
+dfhu.index = dfhu.index.astype(str) + "hu"
+dfcl = pd.read_csv(path + "/processed.cleveland.data", na_values="?", header=None)
+dfcl.index = dfcl.index.astype(str) + "cl"
+dfsw = pd.read_csv(path + "/processed.switzerland.data", na_values="?", header=None)
+dfsw.index = dfsw.index.astype(str) + "sw"
+
+df = pd.concat([dfva, dfhu, dfcl, dfsw])
+\end{minted}
+
+\begin{figure}[!h]
+  \caption{The concatenated data after importing.}
+  \begin{center}
+    \includegraphics[width=1\columnwidth]{./figures/imported.png}
+  \end{center}
+\end{figure}
+
+\subsubsection{Setting Column Names}
+Column names were then set manually, as the source datafiles did not have any header rows. The UCI-provided ``heart-disease.names'' file provided descriptions of each column based on index positions.
+\begin{minted}[breaklines, linenos, numbersep=2pt]{python}
+df.columns = [
+    "age",
+    "isMale",
+    "cp",
+    "restSBP",
+    "chol",
+    "fastingBGLHigh",
+    "restECG",
+    "exerciseMaxHR",
+    "exerciseAngina",
+    "stDepressionExercise",
+    "stSlope",
+    "caFluor",
+    "thal",
+    "stage",
+]
+\end{minted}
+
+\begin{figure}[!h]
+  \caption{The data with column names matched from the UCI data dictionary \parencite{uci_dataset}.}
+  \begin{center}
+    \includegraphics[width=1\columnwidth]{./figures/namesCols.png}
+  \end{center}
+\end{figure}
+
+\subsubsection{Setting Data Types}
+Some dtypes were then manually set to use less system memory and to discourage unexpected behavior from data type inconguence. Some column datatypes were not set during this stage as label-encoded values would later require replacement to incompatible types.
+\begin{minted}[breaklines, linenos, numbersep=2pt]{python}
+df = df.astype(
+    {
+        "age": "uint8",
+        "isMale": "uint8",
+        # "cp" currently label encoded
+        "restSBP": "Int16",
+        "chol": "Int16",
+        "fastingBGLHigh": "Int8",
+        # "restECG" currently label encoded
+        "exerciseMaxHR": "Int16",
+        "exerciseAngina": "Int8",
+        "stDepressionExercise": "float32",
+        # "stSlope" currently label encoded
+        "caFluor": "Int8",
+        # "thal" currently label encoded
+        "stage": "uint8",
+    }
+)
+\end{minted}
+
+\begin{figure}[h!]
+  \caption{Data types as automatically assigned before explicit typecasting.}
+  \begin{center}
+    \includegraphics[width=1\columnwidth]{./figures/dataBeforeTyping.png}
+  \end{center}
+\end{figure}
+
+\begin{figure}[h!]
+  \caption{Data types as explicitly cast (prior to replacement of label-encoded values).}
+  \begin{center}
+    \includegraphics[width=1\columnwidth]{./figures/dataAfterTyping1.png}
+  \end{center}
+\end{figure}
+
+\newpage
+\begin{figure}
+  \caption{The data after setting preliminary data types.}
+  \begin{center}
+    \includegraphics[width=1\columnwidth]{./figures/types1.png}
+  \end{center}
+\end{figure}
+
+\subsubsection{Reversal of Label Encoding}
+Some columns (indicated above as commented lines of code) contained integer values corresponding to qualitative variables. These integer values were replaced with their respective labels to facilitate one-hot encoding later on in this analysis as the values do not convey quantitative or ordinal meaning. Replacements were performed in accordance with the value definitions distributed by UCI alongside the datasets.
+
+\begin{minted}[breaklines, linenos, numbersep=2pt]{python}
+df["cp"] = (
+    df["cp"]
+    .replace({1: "typical anginal", 2: "atypical anginal", 3: "nonanginal", 4: "asymptomatic"})
+    .astype("category")
+)
+df["restECG"] = (
+    df["restECG"].replace({0: "normal", 1: "ST-T abnormality", 2: "LVH"}).astype("category")
+)
+df["stSlope"] = (
+    df["stSlope"].replace({1: "upsloping", 2: "flat", 3: "downsloping"}).astype("category")
+)
+df["thal"] = df["thal"].replace({3: "fixed", 6: "reversible", 7: "none"}).astype("category")
+\end{minted}
+
+\break
+\begin{figure}
+  \caption{Data following replacement of label-encoded values with the relevant labels.}
+  \begin{center}
+    \includegraphics[width=1\columnwidth]{./figures/denormalized.png}
+  \end{center}
+\end{figure}
+
+\subsubsection{Deduplication}
+Finally, two duplicates were dropped. Since the data are de-identified, it is possible that these are not true duplicates (and are simply improbable collisions), but the identical values for continuous numeric values like resting systolic blood pressure and total cholesterol makes this seem less likely. Additionally, in the case of one of the duplicates, the rows were adjacent, suggesting a possible data entry error where one patient was imported twice. Also notably, both duplicates come from the same locality.
+
+\begin{figure}[h!]
+  \caption{The duplicates within the dataset.}
+  \begin{center}
+    \includegraphics[width=1\columnwidth]{./figures/duplicates.png}
+  \end{center}
+\end{figure}
+
+\begin{minted}[breaklines, linenos, numbersep=2pt]{python}
+df.drop_duplicates(inplace=True)
+\end{minted}
+
+\begin{figure}[h!]
+  \caption{The data after deduplication. Note that the number of rows has decreased from 920 to 918.}
+  \begin{center}
+    \includegraphics[width=1\columnwidth]{./figures/deduplicated.png}
+  \end{center}
+\end{figure}
+
+\subsubsection{Visualization}
+The imported, combined data can then be viewed. Univariate and bivariate distributions can also be examined with matplotlib \parencite{matplotlib}.
+
+\begin{figure}[h!]
+  \caption{Univariate distributions of variables within the dataset. Colors present to distinguish plots and do not convey meaning.}
+  \begin{center}
+    \includegraphics[width=1\columnwidth]{./figures/univariate.png}
+  \end{center}
+\end{figure}
+
+\begin{figure}[h!]
+  \caption{Bivariate distributions of variables with respect to heart disease stage.}
+  \begin{center}
+    \includegraphics[width=1\columnwidth]{./figures/bivariate.png}
+  \end{center}
+\end{figure}
+
+\subsubsection{Impute Missing Values}
+\label{impute}
+Many values are missing within the provided datatsets. These can be grouped by locality and viewed with the missingno package to visualize patterns.
+
+\begin{minted}[breaklines, linenos, numbersep=2pt]{python}
+from missingno import matrix
+
+# num pts from each site
+lenva = df.index.str.contains("va").sum()  # VA in Long Beach
+lenhu = df.index.str.contains("hu").sum()  # Hungary
+lencl = df.index.str.contains("cl").sum()  # Cleveland
+lensw = df.index.str.contains("sw").sum()  # Switzerland
+
+# offsets of 0.5 are due to msno matrix defaults
+start = -0.5
+stop = lenva - 0.5
+
+# create msno matrix plot
+ax = matrix(df)
+# shade each region
+ax.axhspan(start, stop, color="#009E73", alpha=0.3, label="VA")
+start += stop - start
+stop += lenhu
+ax.axhspan(start, stop, color="#D55E00", alpha=0.3, label="Hungary")
+start += stop - start
+stop += lencl
+ax.axhspan(start, stop, color="#56B4E9", alpha=0.3, label="Cleveland")
+start += stop - start
+stop += lensw
+ax.axhspan(start, stop, color="#CC79A7", alpha=0.3, label="Switzerland")
+# position legend below, centered
+ax.legend(loc="lower center", bbox_to_anchor=(0.5, -0.12), ncols=4)
+ax.set_ylabel("Patient")
+\end{minted}
+
+\begin{figure}[h!]
+  \caption{Missing values grouped by locality of origin.}
+  \label{msno}
+  \begin{center}
+    \includegraphics[width=1\columnwidth]{./figures/msno.png}
+  \end{center}
+\end{figure}
+
+\newpage
+This figure suggests that many of the clinical features are absent from some of the localities (particularly the VA). Since the data were compiled by a team from the Cleveland region, it makes sense that those data appear to be the most complete. It is possible that some clinical features are more commonly assessed in some localities than in others. The original paper does not provide an explanation for this \parencite{uci_paper}. The lack of coronary artery fluoroscopy in other localities in meaningful quantities suggests that it is unlikely to have much predictive value.
+
+Values can then be imputed by median (to resist outliers compared to a mean) for quantitative values or as mode for qualitative values. Some impossible values (like a blood pressure of zero) are also imputed.
+
+\begin{minted}[breaklines, linenos, numbersep=2pt]{python}
+# quantitative values as median (to resist outliers)
+for quantCol in ["restSBP", "chol", "exerciseMaxHR", "stDepressionExercise"]:
+    df.loc[df[quantCol].isna(), quantCol] = round(df[quantCol].median())
+
+# qualitative (and CA fluoroscopy due to only 3 discrete values) as mode
+for qualCol in ["fastingBGLHigh", "restECG", "exerciseAngina", "stSlope", "caFluor", "thal"]:
+    df.loc[df[qualCol].isna(), qualCol] = df[qualCol].mode()[0]
+
+# inappropriate values
+df.loc[df["restSBP"] == 0, "restSBP"] = round(df["restSBP"].mean())
+df.loc[df["chol"] == 0, "chol"] = round(df["chol"].mean())
+\end{minted}
+
+\begin{figure}[h!]
+  \caption{Data after imputation of missing or nonsensical values.}
+  \begin{center}
+    \includegraphics[width=1\columnwidth]{./figures/imputed.png}
+  \end{center}
+\end{figure}
+
+\subsubsection{Reset Data Types}
+Finally, statsmodels will be used to to fit the model and was found to be incompatible with some of the Pandas nullable integer types (that are no longer necessary post-imputation). Some columns were consequently cast to numpy datatypes.
+\begin{minted}[breaklines, linenos, numbersep=2pt]{python}
+df = df.astype(
+     {
+         "restSBP": "uint8",
+         "chol": "uint16",
+         "fastingBGLHigh": "uint8",
+         "exerciseMaxHR": "uint8",
+         "exerciseAngina": "uint8",
+         "caFluor": "uint8",
+     }
+ )
+\end{minted}
+\begin{figure}[h!]
+  \caption{Data types after resetting pandas datatypes to numpy types. Neither values nor indices were changed by this operation.}
+  \begin{center}
+    \includegraphics[width=1\columnwidth]{./figures/types2.png}
+  \end{center}
+\end{figure}
+
+\subsubsection{One-Hot Encoding}
+The final step of data preparation was one-hot encoding of categorical variables.
+
+\begin{minted}[breaklines, linenos, numbersep=2pt]{python}
+# one-hot encoding
+df = pd.get_dummies(df, dtype="uint8", drop_first=False)
+# keep first to drop normal class manually
+# so coeffs are changes from baseline
+df = df.drop(
+    [
+        "cp_asymptomatic",
+        "restECG_normal",
+        "stSlope_flat",
+        "thal_none",
+    ],
+    axis=1,
+)
+\end{minted}
+
+Following this, the data are fully cleaned and ready for logistic regression.
+\begin{figure}[h!]
+  \caption{Sample of the fully cleaned, one-hot encoded data.}
+  \begin{center}
+    \includegraphics[width=1\columnwidth]{./figures/oneHoted.png}
+  \end{center}
+\end{figure}
+
+\subsection{Tools, Techniques, and Justification}
+To complete these preparation steps, the Python programming language was used \parencite{python}. Several packages were used to extend the base functionality of Python.
+\subsubsection{Data preparation}
+\begin{enumerate}
+  \item Python was used over other statistical computing environments due to author familiarity and the combined extensibility and utility of the Matplotlib and Statsmodels libraries.
+  \item Pandas was used to store the tabular data and perform most of the preprocessing steps \parencite{pandas}.
+  \item Matplotlib was used to visualize the data during the preprocessing steps. It was also used to visualize model results later in the analysis \parencite{matplotlib}.
+  \item Seaborn provided a convenient wrapper around Matplotlib to make heatmaps and bivariate visualizations easier to produce \parencite{seaborn}.
+  \item Missingno was used to create a plot of the locality-grouped variables to look for patterns in missing values \parencite{msno}.
+\end{enumerate}
+
+\subsubsection{Logistic Regression}
+The subsequent analysis of these data will also use additional packages.
+\begin{enumerate}
+  \item Sci-Kit Learn was used to perform a stratified, shuffled split into training and testing data. It also provided an accuracy score function that was used for model performance evaluation \parencite{sklearn}.
+  \item Statsmodels was used to perform the logistic regression \parencite{statsmodels}. It calculates and exposes statistical measures (like z-test p-values) that are more useful that those provided out-of-the-box by Sci-Kit Learn models.
+  \item SciPy was used to provide a softmax function to convert the individual logistic regression stage outcomes into probabilities that all sum to one as described in \ref{equations} \parencite{scipy}.
+\end{enumerate}
+
+\subsubsection{Advantages and Disadvantages}
+Imputing values in this way, as described in \ref{impute}, confers an advantage in that the predictive value of columns where at least one value is absent need not be dropped (as all but three explanatory variables have missing values); this allows those features to provide predictive value instead of discarding potentially-meaningful data. Median (or mode, for categorical variables) imputation is simple and fast to compute and is somewhat robust against outliers (when compared to mean imputation).
+
+However, there are some disadvantages to this approach. Some features have more imputed values than values initially present in the data; Figure \ref{msno} presents these graphically. Columns with a large proportion of imputed values (like coronary artery fluoroscopy results) are unlikely to be of much predictive value outside of the Cleveland cohort due to data sparsity. If this feature is not dropped as insignificant by a model, its results should thus be interpreted with caution. Also, mode imputation may bias models towards the majority class.
+
+\section{Analysis}
+\subsection{Multinomial Logistic Regression Attempt}
+The analysis next used logistic regression to create a model. Initially, multinomial logistic regression was attempted using the Statsmodels package.
+
+\begin{minted}[breaklines, linenos, numbersep=2pt]{python}
+from sklearn.metrics import accuracy_score
+from sklearn.model_selection import train_test_split
+from statsmodels.api import MNLogit, add_constant
+
+dfMN = df.copy(deep=True)  # don't mutate df
+predictors = dfMN.columns.drop("stage")  # columns for X
+X_train, X_test, y_train, y_test = train_test_split(
+    dfMN[predictors],
+    dfMN["stage"],
+    test_size=0.2,
+    random_state=1571,
+    stratify=dfMN["stage"],
+)
+
+X_train = add_constant(X_train)
+model = MNLogit(y_train, X_train).fit()
+
+pred = model.predict(add_constant(X_test))
+pred = pred.idxmax(axis=1)
+print("Test set accuracy:", accuracy_score(y_test, pred))
+\end{minted}
+
+\begin{figure}[h!]
+  \caption{Accuracy of the initial multinomial logistic regression model.}
+  \begin{center}
+    \includegraphics[width=1\columnwidth]{./figures/accuracyMNL.png}
+  \end{center}
+\end{figure}
+
+\begin{figure}[h!]
+  \caption{Summary (via the model.summary() method) of the multinomial logistic regression model. Calculations performed with Statsmodels \parencite{statsmodels}.}
+  \begin{center}
+    \includegraphics[width=1\columnwidth]{./figures/summaryMNL.png}
+  \end{center}
+\end{figure}
+
+\subsection{OVR Model}
+\subsubsection{Justification, Advantages, and Disadvantages}
+Since multinomial logistic regression computes one model fewer than the number of levels of the response variable, each stage is a difference-from-baseline model \parencites[8:10]{multinomial}{statsmodels}. Consequently, simple dropping of features with statistically insignificant coefficients is not efficient. Thus, this model is not the best way to answer the research question, as individual features can only be considered in how they affect all stages, when it is possible that some features are only impactful on some stage predictions (this is preliminarily suggested by the model summary; for example, the age coefficient is significant at all stages except stage four with the multinomial model).
+
+A one-verses-rest (OVR) model was then instead developed to allow consideration of independent feature sets for prediction of each stage. In this OVR model, each stage predicts whether a patient is part of a stage (1) or not part of a stage (0) \parencite[4:03]{multinomial}. Fitting the stages in this way allows for each stage to incorporate a separate set of features. Also, the ability to drop one feature at a time within a given stage can prevent model deterioration due to dropping two insignificant features that may have exhibited some multicolinearity.
+
+This OVR model provides an advantage in that each stage is easy to conceptualize in terms of monomial logistic regression. Each model is also quick and efficient to train. This method could have disadvantages, particularly if there were many more levels of the response variable, as each model has to be trained individually. Another disadvantage is that the error of each stage propagates to the combined model; each stage can predict with a generally favorable accuracy of around 80\%, but the final model propagates and compounds these errors to a final accuracy of 58.7\%.
+
+Logistic regression was selected over other classification methods as it permits assessment of the statistical significance of each coefficient, so is most in line with the research question.
+
+\subsubsection{Equations}
+\label{equations}
+Logistic regression uses the logit function on the response variable to transform a problem into one that can be modelled linearly. \parencite[Ch. 10.2]{textbook}. A linear model is constructed to fit a simple equation \parencite[Eq. 10.1]{textbook}.
+$$p=\beta_0 + \beta_1 x_1 + ... + \beta_n x_n$$
+Where $p$ is the probability a patient belongs to a given stage, $\beta$ is one of the calculated coefficients, and $x$ is any of the available explanatory variables.
+
+To bound this between zero and one, Euler's constant $e$ is used to create the logistic response function.
+
+$$p=\frac{1}{1+e^{\beta_0 + \beta_1 x_1 + ... + \beta_n x_n}}$$
+
+The odds of an event are defined as $odds_{stage=True} = \frac{p}{1-p}$; a simple substitution can be made to define a relationship between the predictors and the resultant odds \parencite[Eqs. 10.5-10.6]{textbook}.
+$$odds_{stage=True}=e^{\beta_0 + \beta_1 x_1 + ... + \beta_n x_n}$$
+$$log_e(odds_{stage=True})=\beta_0 + \beta_1 x_1 + ... + \beta_n x_n$$
+
+This analysis selected significant values of $\beta$, calculated them, and used these principals to interpret the meanings of these values.
+
+Since conventional (and OVR) logistic regression models require binary (not multi-class, as in the case of the UCI heart data) response variables, a different equation was calculated for each stage \parencite{logReg}. These probabilities can be combined using the SoftMax function so that the probability of each class can be obtained \parencite{softmax, scipy}.
+
+$$\sigma(\{p_{model0}, p_{model1}, ..., p_{model4}\})_j = \frac{e^{p_j}}{\sum_{k=model 0}^{model 4}{e^{p_k}}}$$
+
+With these, one set of explanatory variables can be fed through each of the five stage-specific models to obtain the probability of that stage being present compared to that stage being absent. These probabilities can then be SoftMax-transformed to calculate the probability for each stage with respect to each other, as is done in multinomial regression \parencites[]{softmax}[10:36]{multinomial}.
+
+\subsubsection{Calculations}
+
+Each stage was trained with a custom function.
+
+\begin{minted}[breaklines, linenos, numbersep=2pt]{python}
+def trainStage(
+    df: pd.DataFrame, stage: int, colDrop: List[str] = [], alpha: float = 0.05
+) -> ResultsWrapper:
+    """Train a single logistic regression model for a given stage."""
+    from sklearn.metrics import accuracy_score
+    from sklearn.model_selection import train_test_split
+    from statsmodels.api import Logit, add_constant
+
+    # Predict if it belongs to a stage (0) or not (1)
+    dfStage = df.copy(deep=True)  # don't mutate df
+    dfStage["stageSource"] = dfStage["stage"]
+    dfStage.loc[dfStage["stageSource"] == stage, "stage"] = 1
+    dfStage.loc[dfStage["stageSource"] != stage, "stage"] = 0
+    dfStage.drop(["stageSource"], axis=1, inplace=True)
+
+    # Assumption 1: binary response levels
+    assert dfStage["stage"].nunique() == 2, "Response levels must be binary"
+
+    predictors = dfStage.columns.drop("stage")  # columns for X
+    X_train, X_test, y_train, y_test = train_test_split(
+        dfStage[predictors],
+        dfStage["stage"],
+        test_size=0.2,
+        random_state=1571,
+        stratify=dfStage["stage"],
+    )
+
+    # Droping cols here lets arbitrary cols, incl const
+    # be dropped if needed
+    X_train = add_constant(X_train).drop(colDrop, axis=1)
+    X_test = add_constant(X_test).drop(colDrop, axis=1)
+    model = Logit(y_train, X_train).fit()
+
+    # Drop for p-values below alpha
+    p-val = model.pvalues
+    p-val = p-val.sort_values(ascending=False)
+    while p-val.iloc[0] >= alpha:
+        X_train = X_train.drop(p-val.index[0], axis=1)
+        X_test = X_test.drop(p-val.index[0], axis=1)
+        del model
+        model = Logit(y_train, X_train).fit()
+
+    pred = model.predict(X_test).round()
+    print(f"Test set accuracy for stage {stage}: {accuracy_score(y_test, pred)}")
+    return model
+
+model0 = trainStage(df, stage=0)
+model1 = trainStage(df, stage=1)
+model2 = trainStage(df, stage=2)
+model3 = trainStage(df, stage=3)
+model4 = trainStage(df, stage=4)
+models = [model0, model1, model2, model3, model4]
+\end{minted}
+
+This function will also feature engineer each OVR model stage by dropping the coefficient with the largest p-value and refitting that stage. Only one coefficient is dropped at a time due to the possibility of multicolinearity leading to predictive features being erroneously dropped. This process was repeated until only features with a p-value below $\alpha=0.05$ remained. This operation provides an answer to the research question by tuning each OVR stage model until only features with a statistically significant impact on the outcome remain.
+
+The accuracy scores for each stage were calculated during training.
+
+\begin{figure}[h!]
+  \caption{Accuracy scores on the test set for each stage of the OVR model. Calculated with \parencite{sklearn}.}
+  \label{accuracies}
+  \begin{center}
+    \includegraphics[width=1\columnwidth]{./figures/accuracies.png}
+  \end{center}
+\end{figure}
+
+The accuracy of the overall model was calculated by taking the softmax of each OVR stage and using the largest probability to predict the most likely stage.
+
+\begin{minted}[breaklines, linenos, numbersep=2pt]{python}
+def testStages(df: pd.DataFrame, models: List[ResultsWrapper]) -> pd.DataFrame:
+    """Apply the models to a test set and use softmax to return probabilities."""
+    from scipy.special import softmax
+    from sklearn.metrics import accuracy_score
+    from sklearn.model_selection import train_test_split
+    from statsmodels.api import add_constant
+
+    predictorsAll = df.columns.drop("stage")
+    _X_train, X_test, _y_train, y_test = train_test_split(
+        df[predictorsAll],
+        df["stage"],
+        test_size=0.2,
+        random_state=1571,
+        stratify=df["stage"])
+    stage = 0
+    results = pd.DataFrame()
+    for model in models:
+        # This allows testing if model had constant dropped during training
+        X_test_local = X_test.copy(deep=True)
+        if "const" in model.params.index:
+            X_test_local = add_constant(X_test_local)
+        predColDrop = [
+            item for item in X_test_local.columns if item not in model.params.index
+        ]
+        X_test_local = X_test_local.drop(predColDrop, axis=1)
+        series = model.predict(X_test_local)
+        series = pd.Series(series, name=stage)
+        results = pd.concat([results, series], axis=1)
+        stage += 1
+    results = results.apply(softmax, axis=1).apply(pd.Series)
+    print(f"Combined test accuracy: {accuracy_score(y_test, results.idxmax(axis=1))}")
+    return results
+\end{minted}
+
+\begin{figure}[h!]
+  \caption{The accuracy of the combined model is 58.7\%.}
+  \begin{center}
+    \includegraphics[width=0.96\columnwidth]{./figures/testAccuracy.png}
+  \end{center}
+\end{figure}
+\break
+
+\begin{figure}[h!]
+  \caption{Summaries for each of the OVR models. Calculated with \parencite{statsmodels}.}
+  \label{coefficient}
+  \begin{center}
+    \includegraphics[width=1\columnwidth]{./figures/summaries.png}
+  \end{center}
+\end{figure}
+
+\subsubsection{Assumption Verification}
+Logistic regression has several underlying assumptions \parencite{logReg, assumptions, resid}.
+\begin{enumerate}
+
+  \item The response variable (within each stage) is binary.
+
+    This was asserted during training of each stage.
+    \begin{minted}[breaklines, linenos, numbersep=2pt]{python}
+    assert dfStage["stage"].nunique() == 2, "Response levels must be binary"
+    \end{minted}
+
+  \item Observations are idependent
+
+    This was hadled during data cleaning and can be asserted.
+  \begin{minted}[breaklines, linenos, numbersep=2pt]{python}
+  assert ~df.duplicated().any(), "Check for duplicates/independence of rows"
+  \end{minted}
+
+    Additionally, Studentized Pearson Residuals can be plotted to verify that the residuals do not exhibit any clear patterns \parencite["Assumption Check"]{resid}.
+
+    \break
+
+    \begin{figure}[h!]
+      \caption{Plots of residuals.}
+      \begin{center}
+        \includegraphics[width=1\columnwidth]{./figures/resid.png}
+      \end{center}
+      \textit{Note.} The top row shows the estimated probability versus the Studentized Pearson residuals. Ideally, the regression line with LoWeSS smothing (in green) should have zero slope and intercept \parencite["Logistic Regression Residuals"]{resid}. The bottom row shows the residual for each row; ideally, residuals will be randomly and normally distributed around a mean of zero. These plots suggest small deviations of these assumptions; this will be included as a caution in the discussion of model implications.
+    \end{figure}
+  \item No multicolinearity exists between different explanatory variables.
+    \begin{figure}[h!]
+      \caption{Heatmap showing minimal multicolinearity exists between clinical features.}
+      \begin{center}
+        \includegraphics[width=1\columnwidth]{./figures/corr.png}
+      \end{center}
+    \end{figure}
+
+  \item The sample size for each response variable level is large.
+
+    This can be verified with a simple assert statement.
+    \begin{minted}[breaklines, linenos, numbersep=2pt]{python}
+    assert (df["stage"].value_counts() >= 10).all(), "Insufficient number of rows"
+    \end{minted}
+  \item No extreme outliers exist.
+    \begin{figure}[h!]
+      \caption{Plot of the distribution of Cook's number showing influence for each stage model.}
+      \begin{center}
+        \includegraphics[width=1\columnwidth]{./figures/cook.png}
+      \end{center}
+      \textit{Note.} Ideally, no values exceed the red vertical line. Each stage, particularly stage 3, has some excessively-influential values. This understanding will be included as a caution in the discussion of model implications.
+    \end{figure}
+
+    \begin{figure}[h!]
+      \caption{The proportions of influential values (Cook's Number $\geq{} 4/n$) for each stage.}
+      \begin{center}
+        \includegraphics[width=1\columnwidth]{./figures/influetialProportions.png}
+      \end{center}
+    \end{figure}
+
+  \item There is linearity between the log odds of the response variable and the explanatory variable.
+
+    Checking this graphically would require 18 plots (one per encoded explanatory variable) for each stage. Instead, the Box-Tidwell test can be performed to verify this assumption in a rigorous way.
+    \begin{figure}[h!]
+      \caption{Box-Tidwell test results suggesting that no explanatory variables violate the assumption of linearity to a statistically significant extent (the test fails to reject the null hypothesis that linearity exists).}
+      \begin{center}
+        \includegraphics[width=1\columnwidth]{./figures/box-tidwell-p-vals.png}
+      \end{center}
+    \end{figure}
+
+\end{enumerate}
+
+\section{Summary and Implications}
+\subsection{Interpretation}
+Each of the coefficients in Figure \ref{coefficient} can be interpreted as the change to the log odds of the presence of the given stage of heart disease for a unit increase to the explanatory variable. Raising $e^\beta$, where $\beta$ is the given coefficient, permits calculation of the magnitude of change to the odds of a particular stage of heart disease for a one-unit increase to the explanatory variable.
+
+For example, in the stage four model, the coefficient associated with ST segment depression during exercise is 0.8278. Since $e^{0.8278} = 2.288$, the odds that a patient with this feature has stage four heart disease are 2.288 times greater than a patient without this feature. Similarly, the coefficient for age in stage three is 0.0234. Since $e^{0.0234}=1.024$, an increase of one year to age is associated with a 2.4\% increase to the odds of a patient having stage three heart disease. This process can be generalized to every coefficient within every stage.
+
+\subsubsection{Relation to Reasearch Question}
+
+These findings are summarized in Figure \ref{featuresOverview}. This figure shows in green which features contribute significantly to each stage and provide annotations suggesting the extent (fold change to the odds for a unit increase).
+
+In differentiating the absence of heart disease (stage zero) from the presence of heart disease, age, gender, maximum heart rate during exercise, angina during exercise, ST segment depression during exercise, coronary artery fluoroscopy results, presence of atypical angina, presence of nonanginal chest pain, presence of typical angina, presence of an upward-sloping ST segment, and the presence of fixed defects upon thallium scintigraphy had statistically significant impacts. This model performed with 78.3\% accuracy on unseen data.
+
+For differentiating stage one heart disease from other stages, age, gender, angina during exercise, presence of atypical angina, and the presence of nonanginal chest pain had significant coefficients. This model stage had an accuracy of 70.7\%.
+
+For identifying stage two heart disease from other stages, an adjustment constant, age, gender, presence of atypical angina, presence of nonanginal chest pain, presence of fixed defects upon thallium scintigraphy, and the presence of reversible defects upon thallium scintigraphy had significant effects. This model stage had an accuracy of 85.3\%.
+
+Stage three heart disease could be differentiated from other stages with age, maximum heart rate during exercise, coronary artery fluoroscopy results, presence of atypical angina, presence of ST-T wave abnormalities upon ECG, presence of a downward-sloping ST segment, and the presence of fixed defects upon thallium scintigraphy. This model stage had an 88.6\% accuracy.
+
+Stage four heart disease could be identified using an adjustment constant, ST segment depression during exercise, coronary artery fluoroscopy results, and the presence of left ventricular hypertrophy signs upon ECG. This model stage had a 95.7\% accuracy.
+
+\subsection{Limitation}
+The combined model had an overall accuracy on unseen data of 58.7\%. Each individual model performed with a greater accuracy than this, but the error compounds as it propagates across all models (see Figure \ref{accuracies} for the accuracy of each model stage). Typically, the second highest-valued probability was correct for cases where the combined model was incorrect (in other words, the second-best guess was correct). Some of the assumptions of logistic regression are weakly violated by some model stages (there are many influential values and the Studentized Pearson residuals are not normally distributed). This can lead to model bias or poor performance, which is why it is important to perform testing on unseen data.
+
+\begin{figure}[h!]
+  \caption{Accuracy values for the training and testing set of the combined model.}
+  \begin{center}
+    \includegraphics[width=1\columnwidth]{./figures/accuracyFinal.png}
+  \end{center}
+\end{figure}
+
+The proximity of the accuracy scores on the training and testing sets suggest that the model does not appear to be overfit to these data and thus, model bias towards the training data is negligible. However, given the assumption violations, it is still possible that this model could generalize poorly, so it should only be deployed alongside performance monitoring. Since the training data is also from 1989, it is possible that people or test procedures could have changed in the intervening years in a way not in keeping with the training environment.
+
+However, limitations aside, this model still effectively helps answer the research question about the extent to which different clinical features predict heart disease stages (as shown in Figure \ref{featuresOverview}).
+
+\subsection{Future Directions}
+Future studies of this dataset could explore other logistic regression techniques, such as a one-versus-all system as opposed to a one-versus-rest system. Instead of training a model on differentiating between belonging to or not belonging to a class, it could be useful to train on ``belongs to this class,'' ``is less serious than this class,'' and ``is more serious than this class.'' Alternatively, a web of models where every pairwise comparison is made could also be developed. A OVR model could also be augmented by a second discriminator model in cases where the two (or more) best guesses have similar magnitude. For example, a stage two versus stage three model could be trained to provide a prediction if this OVR model suggests stage two and stage three disease are both relatively probable, with only a slight preference for one over the other.
+
+Insight, and potentially superior accuracy, may be obtained by also using other classification methods (such as a classification tree, random forest, various boosting algorithms, or an artificial neural network). In an analysis aimed to provide the maximum accuracy score, these classification methods could be considered alongside logistic regression models to determine an ideal classification algorithm and hyperparameters. However, in the context of this research question, these schemes are not necessary as this OVR logistic regression model is able to identify the features that correlate significantly with the presence or absence of any given class.
+
+\bigskip
+
+\printbibliography
+\end{document}
+%vim: awa ar

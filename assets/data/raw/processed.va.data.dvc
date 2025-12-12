@@ -1,0 +1,6 @@
+outs:
+- md5: 4249d03ca7711e84f4444768c9426170
+  size: 6737
+  isexec: true
+  hash: md5
+  path: processed.va.data

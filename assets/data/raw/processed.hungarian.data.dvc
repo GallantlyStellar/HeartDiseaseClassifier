@@ -1,0 +1,6 @@
+outs:
+- md5: 22e96bee155b5973568101c93b3705f6
+  size: 10263
+  isexec: true
+  hash: md5
+  path: processed.hungarian.data
